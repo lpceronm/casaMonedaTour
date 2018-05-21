@@ -1,0 +1,32 @@
+version: "3.6"
+
+services:
+  app:
+     networks:
+       - backend
+     depends_on:
+       - 'db'
+     build: '.'
+     volumes:
+       - .:/casaMonedaTour
+     ports:
+       - 3000:3000
+     environment:
+      POSTGRES_ROOT_PASSWORD: rootCasaMoneda
+      POSTGRES_USER: casaMonedaTour
+      POSTGRES_PASSWORD: rootCasaMoneda 
+  db:
+    networks:
+      - backend
+    image: postgres
+    environment:
+      POSTGRES_ROOT_PASSWORD: rootCasaMoneda
+      POSTGRES_USER: casaMonedaTour
+      POSTGRES_PASSWORD: rootCasaMoneda
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+networks:
+  backend:

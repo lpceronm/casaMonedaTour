@@ -3,6 +3,9 @@ class CoinsController < ApplicationController
 
   # GET /coins
   # GET /coins.json
+  def museum 
+  end
+
   def index
     @coins = Coin.all
   end

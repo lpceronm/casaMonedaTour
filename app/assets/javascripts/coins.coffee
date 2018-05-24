@@ -3,3 +3,4 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 #= require 'museum/three.js'
 #= require 'museum/PointerLockControls.js'
+#= require 'museum/Detector.js'

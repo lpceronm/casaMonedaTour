@@ -4,6 +4,7 @@ class CoinsController < ApplicationController
   # GET /coins
   # GET /coins.json
   def museum 
+    @test_info = "Funciona"
   end
 
   def index

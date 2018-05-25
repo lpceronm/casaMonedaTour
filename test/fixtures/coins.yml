@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  num_record: MyString
+  material: MyString
+  country: MyString
+  denomination: MyString
+  batch: MyString
+  location: MyText
+  issuer: MyString
+  serial_number: MyString
+  part_number: 
+  quantity: 
+
+two:
+  name: MyString
+  num_record: MyString
+  material: MyString
+  country: MyString
+  denomination: MyString
+  batch: MyString
+  location: MyText
+  issuer: MyString
+  serial_number: MyString
+  part_number: 
+  quantity: 

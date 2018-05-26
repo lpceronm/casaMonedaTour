@@ -97,7 +97,7 @@ animate();
 function init() {
   console.log('<%= @test_info %>')
   camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 1000);
-  // camera.translateY(-6);
+  camera.translateY(16);
 
   scene = new THREE.Scene();
   scene.background = new THREE.Color(0xffffff);
@@ -211,6 +211,9 @@ function init() {
         map: floorTexture
       })
       cube = new THREE.CubeGeometry(3, 3, 0.2)
+    
+      var coins_array = [];
+
 
     for (let i = -1; i < 35; i += 5) {
       cube1 = new THREE.Mesh(cube ,textureMesh);
@@ -219,14 +222,54 @@ function init() {
       cube2 =  new THREE.Mesh(cube ,textureMesh);
       cube2.position.set(i, 2.5, -35.6);
       obj.add(cube2);
-      cube3 =  new THREE.Mesh(cube ,textureMesh);
-      cube3.position.set(i + 3, 2.5, -34);
-      obj.add(cube3);
-      cube4 =  new THREE.Mesh(cube ,textureMesh);
-      cube4.position.set(i + 3, 2.5, 2);
-      obj.add(cube4);
+      coins_array.push(cube1);
+      coins_array.push(cube2);      
 
     }
+    for (let i = 2.5; i > -36.5; i -= 5) {
+      cube1 = new THREE.Mesh(cube ,textureMesh);
+      cube1.position.set(36, 2.5, i);
+      cube1.rotateY(-Math.PI / 2);
+      obj.add(cube1);
+      cube11 = new THREE.Mesh(cube ,textureMesh);
+      cube11.position.set(35, 2.5, i);
+      cube11.rotateY(-Math.PI / 2);
+      obj.add(cube11);
+      cube2 =  new THREE.Mesh(cube ,textureMesh);
+      cube2.position.set(46.1, 2.5, i);
+      cube2.rotateY(-Math.PI / 2);
+      obj.add(cube2);
+      cube22 =  new THREE.Mesh(cube ,textureMesh);
+      cube22.position.set(47.4, 2.5, i);
+      cube22.rotateY(-Math.PI / 2);
+      obj.add(cube22);
+      cube3 = new THREE.Mesh(cube ,textureMesh);
+      cube3.position.set(-3.4, 2.5, i);
+      cube3.rotateY(-Math.PI / 2);
+      obj.add(cube3);
+      cube33 = new THREE.Mesh(cube ,textureMesh);
+      cube33.position.set(-2, 2.5, i);
+      cube33.rotateY(-Math.PI / 2);
+      obj.add(cube33);
+      cube4 =  new THREE.Mesh(cube ,textureMesh);
+      cube4.position.set(85.7, 2.5, i);
+      cube4.rotateY(-Math.PI / 2);
+      obj.add(cube4);
+      cube5 =  new THREE.Mesh(cube ,textureMesh);
+      cube5.position.set(84.3, 2.5, i);
+      cube5.rotateY(-Math.PI / 2);
+      obj.add(cube5)
+
+      coins_array.push(cube1);
+      coins_array.push(cube11);
+      coins_array.push(cube2);   
+      coins_array.push(cube3);
+      coins_array.push(cube33);
+      coins_array.push(cube4); 
+      coins_array.push(cube5);   
+
+    }
+
     scene.add(obj);
     obj.position.set(-125, 0, 0);
     obj.scale.set(3, 3, 3);

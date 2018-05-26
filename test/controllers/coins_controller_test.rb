@@ -17,7 +17,7 @@ class CoinsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create coin" do
     assert_difference('Coin.count') do
-      post coins_url, params: { coin: { batch: @coin.batch, country: @coin.country, denomination: @coin.denomination, issuer: @coin.issuer, location: @coin.location, material: @coin.material, name: @coin.name, num_record: @coin.num_record, part_number: @coin.part_number, quantity: @coin.quantity, serial_number: @coin.serial_number } }
+      post coins_url, params: { coin: { batch: @coin.batch, country: @coin.country, denomination: @coin.denomination, image: @coin.image, issuer: @coin.issuer, location: @coin.location, material: @coin.material, name: @coin.name, num_record: @coin.num_record, part_number: @coin.part_number, quantity: @coin.quantity, serial_number: @coin.serial_number } }
     end
 
     assert_redirected_to coin_url(Coin.last)
@@ -34,7 +34,7 @@ class CoinsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update coin" do
-    patch coin_url(@coin), params: { coin: { batch: @coin.batch, country: @coin.country, denomination: @coin.denomination, issuer: @coin.issuer, location: @coin.location, material: @coin.material, name: @coin.name, num_record: @coin.num_record, part_number: @coin.part_number, quantity: @coin.quantity, serial_number: @coin.serial_number } }
+    patch coin_url(@coin), params: { coin: { batch: @coin.batch, country: @coin.country, denomination: @coin.denomination, image: @coin.image, issuer: @coin.issuer, location: @coin.location, material: @coin.material, name: @coin.name, num_record: @coin.num_record, part_number: @coin.part_number, quantity: @coin.quantity, serial_number: @coin.serial_number } }
     assert_redirected_to coin_url(@coin)
   end
 

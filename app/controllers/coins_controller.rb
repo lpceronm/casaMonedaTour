@@ -6,7 +6,7 @@ class CoinsController < ApplicationController
   def museum 
     @test_info = "Funciona"
   end
-
+  
   def index
     @coins = Coin.all
   end
@@ -73,6 +73,6 @@ class CoinsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def coin_params
-      params.require(:coin).permit(:name, :num_record, :material, :country, :denomination, :batch, :location, :issuer, :serial_number, :part_number, :quantity)
+      params.require(:coin).permit(:name, :num_record, :material, :country, :denomination, :batch, :location, :issuer, :serial_number, :part_number, :quantity, :image)
     end
 end

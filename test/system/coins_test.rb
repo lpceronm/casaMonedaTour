@@ -17,6 +17,7 @@ class CoinsTest < ApplicationSystemTestCase
     fill_in "Batch", with: @coin.batch
     fill_in "Country", with: @coin.country
     fill_in "Denomination", with: @coin.denomination
+    fill_in "Image", with: @coin.image
     fill_in "Issuer", with: @coin.issuer
     fill_in "Location", with: @coin.location
     fill_in "Material", with: @coin.material
@@ -38,6 +39,7 @@ class CoinsTest < ApplicationSystemTestCase
     fill_in "Batch", with: @coin.batch
     fill_in "Country", with: @coin.country
     fill_in "Denomination", with: @coin.denomination
+    fill_in "Image", with: @coin.image
     fill_in "Issuer", with: @coin.issuer
     fill_in "Location", with: @coin.location
     fill_in "Material", with: @coin.material

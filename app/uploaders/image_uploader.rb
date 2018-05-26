@@ -1,4 +1,6 @@
 class ImageUploader < CarrierWave::Uploader::Base
+  include CarrierWave::MiniMagick
+
   storage :file
   process convert: 'png'
   process quality: 1000

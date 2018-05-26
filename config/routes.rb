@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :coins
   resources :coins do
     collection do
       get "museum", to: 'coins/museum'

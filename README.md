@@ -14,11 +14,12 @@ Comandos para iniciar
 
 
 To do 
-* Hacer click
-* Llenar paredes
-* Definir limites 
-* Evitar pasar paredes 
-* Interfaz usuario 
-* Subir imagenes 
-* Mostrar info imágenes 
-* Cargar info monedas 
+* Hacer click | 3  Cami 
+* Mostrar info imágenes | 5  Barbas y Laura 
+* Rellenar paredes | 2  Barbas y Laura 
+* Definir limites  | 4 Sebas 
+* Interfaz usuario | 3  Cami
+* Cargar info monedas | 2 Sebas 
+* Landing | 2 Cami 
+* Subir imagenes | 1 Laura
+* Evitar pasar paredes | 4 

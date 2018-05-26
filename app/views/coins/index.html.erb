@@ -16,6 +16,7 @@
       <th>Serial number</th>
       <th>Part number</th>
       <th>Quantity</th>
+      <th>Image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -34,6 +35,7 @@
         <td><%= coin.serial_number %></td>
         <td><%= coin.part_number %></td>
         <td><%= coin.quantity %></td>
+        <td><%= coin.image %></td>
         <td><%= link_to 'Show', coin %></td>
         <td><%= link_to 'Edit', edit_coin_path(coin) %></td>
         <td><%= link_to 'Destroy', coin, method: :delete, data: { confirm: 'Are you sure?' } %></td>

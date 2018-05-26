@@ -12,6 +12,7 @@ class CreateCoins < ActiveRecord::Migration[5.2]
       t.string :serial_number
       t.integer :part_number
       t.integer :quantity
+      t.string :image
 
       t.timestamps
     end

@@ -4,7 +4,12 @@ class CoinsController < ApplicationController
   # GET /coins
   # GET /coins.json
   def museum 
-    @test_info = "Funciona"
+    @test_info = []
+    for i in 1..180 do
+      folder_path = "../assets/images/"
+      name = 'image' + i.to_s + '.png'
+      @test_info << folder_path + name
+    end
   end
   
   def index

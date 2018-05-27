@@ -11,7 +11,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{model.id}"
+    "assets/images"
   end
 
   def extension_whitelist
@@ -19,7 +19,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   def filename
-     "#{secure_token}.png" if original_filename.present?
+     "image" + "#{model.id}" +".png"
   end
 
   protected

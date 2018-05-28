@@ -37,7 +37,7 @@ class CoinsController < ApplicationController
 
     respond_to do |format|
       if @coin.save
-        format.html { redirect_to @coin, notice: 'Coin was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Muchas gracias, la moneda fue creada!.' }
         format.json { render :show, status: :created, location: @coin }
       else
         format.html { render :new }

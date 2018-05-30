@@ -5,8 +5,43 @@
     (W, A, S, D = Move, SPACE = Jump, MOUSE = Look around)
   </div>
 </div>
+<div id="infoBox" title="Demo Information" style=" ">
+This is a demo, part of a collection at
+<a href="http://stemkoski.github.io/Three.js/">http://stemkoski.github.io/Three.js/</a>
+</div>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<link rel=stylesheet href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
 <%= javascript_include_tag 'coins' %>
-
+<script>
+$(function() 
+{
+	 $("#infoBox")
+	.css( 
+	{
+	   "background":"rgba(255,255,255,0.5)"
+	})
+	.dialog({ autoOpen: false, 
+		show: { effect: 'fade', duration: 500 },
+		hide: { effect: 'fade', duration: 500 } 
+	});
+	
+	 $("#infoButton")
+       .text("") // sets text to empty
+	.css(
+	{ "z-index":"2",
+	  "background":"rgba(0,0,0,0)", "opacity":"0.9", 
+	  "position":"absolute", "top":"4px", "left":"4px"
+	}) // adds CSS
+    .append("<img width='32' height='32' src='images/icon-info.png'/>")
+    .button()
+	.click( 
+		function() 
+		{ 
+			$("#infoBox").dialog("open");
+		});
+});
+</script>
 <script>
 var camera, scene, renderer, controls;
 
@@ -121,6 +156,10 @@ function init() {
         if (canJump === true) velocity.y += 350;
         canJump = false;
         break;
+
+      case 67:
+        $("#infoBox").dialog("close")
+        break;  
 
     }
 
@@ -509,7 +548,7 @@ function init() {
   document.body.appendChild(renderer.domElement);
 
   //
-  // document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+  document.addEventListener( 'mousedown', onMouseDown, false );
 
   window.addEventListener('resize', onWindowResize, false);
 
@@ -530,15 +569,38 @@ function onWindowResize() {
 // }
 
 
+function onMouseDown() {
+
+  if (controlsEnabled === true) {
+     console.log("Click");
+     raycaster.setFromCamera( mouse, camera );
+     var intersects = raycaster.intersectObjects(scene.getObjectByName("Museum",true).children);
+     if ( intersects.length > 0 ) {
+      if ( INTERSECTED != intersects[ 0 ].object ) {
+        $("#infoBox").text("") // sets text to empty
+        $("#infoBox").append(intersects[0].object.uuid) // sets text to empty
+        $("#infoBox").dialog("open");
+
+      }else{
+        console.log("found"); 
+      }
+    } else {
+      console.log("Paila"); 
+    }
+  } 
+ 
+
+  
+  
+}
+
 function animate() {
 
   requestAnimationFrame(animate);
 
   if (controlsEnabled === true) {
    
-    raycaster.setFromCamera( mouse, camera );
-
-    var intersects = raycaster.intersectObjects(scene.getObjectByName("Museum",true).children);
+   
     // console.log(scene.getObjectByName("Museum",true));
     
 // scene.getChildByName("Museum",true)
@@ -583,18 +645,9 @@ function animate() {
 
     prevTime = time;
 
-    if ( intersects.length > 0 ) {
-      if ( INTERSECTED != intersects[ 0 ].object ) {
-        // console.log("soy yo");
-      }else{
-        console.log("found");
-        
-      }
-    } else {
-      console.log("Paila"); 
-    }
+    
   
-
+  //  Necesito la cruz del centro y con el click obtener la pocicion 
   renderer.render(scene, camera);
   }
 }

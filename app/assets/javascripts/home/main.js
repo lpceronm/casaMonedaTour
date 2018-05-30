@@ -3,8 +3,8 @@
   "use strict";
 
   // Sticky Nav
-    $(window).on('scroll', function() {
-        if ($(window).scrollTop() > 200) {
+    $(document).on('scroll', function() {
+        if ($(document).scrollTop() > 200) {
             $('.scrolling-navbar').addClass('top-nav-collapse');
         } else {
             $('.scrolling-navbar').removeClass('top-nav-collapse');
@@ -20,15 +20,15 @@
             currentClass: 'active'
     }); 
 
-    $(window).on('load', function() {
+    $(document).on('load', function() {
        
         $('body').scrollspy({
             target: '.navbar-collapse',
             offset: 195
         });
 
-        $(window).on('scroll', function() {
-            if ($(window).scrollTop() > 200) {
+        $(document).on('scroll', function() {
+            if ($(document).scrollTop() > 200) {
                 $('.fixed-top').addClass('menu-bg');
             } else {
                 $('.fixed-top').removeClass('menu-bg');
@@ -82,8 +82,8 @@
 /* 
    Sticky Nav
    ========================================================================== */
-    $(window).on('scroll', function() {
-        if ($(window).scrollTop() > 200) {
+    $(document).on('scroll', function() {
+        if ($(document).scrollTop() > 200) {
             $('.header-top-area').addClass('menu-bg');
         } else {
             $('.header-top-area').removeClass('menu-bg');
@@ -116,7 +116,7 @@
         $('html, body').stop().animate({
             'scrollTop': $(target).offset().top
         }, scrollAnimationTime, scrollAnimation, function () {
-            window.location.hash = target;
+            document.location.hash = target;
         });
     });
 
@@ -125,7 +125,7 @@
    ========================================================================== */
     var offset = 200;
     var duration = 500;
-    $(window).scroll(function() {
+    $(document).scroll(function() {
       if ($(this).scrollTop() > offset) {
         $('.back-to-top').fadeIn(400);
       } else {

@@ -385,158 +385,160 @@ function init() {
     objects = coins_array
   });
 
-  // var objectLoader1 = new THREE.ObjectLoader();
-  // objectLoader1.load("../assets/model_plan/coinmuseum.json", function (obj) {
-  //     // cube = new THREE.CubeGeometry(3, 3, 0.2)
-  //     var coins_array = [];
+  var objectLoader1 = new THREE.ObjectLoader();
+  objectLoader1.load("../assets/model_plan/coinmuseum.json", function (obj) {
+      // cube = new THREE.CubeGeometry(3, 3, 0.2)
+      var coins_array = [];
 
-  //     cube = new THREE.CylinderGeometry(2, 2, 0.5,30,0.2)
-  //     cube.rotateX(-Math.PI / 2);
+      cube = new THREE.CylinderGeometry(2, 2, 0.5,30,0.2)
+      cube.rotateX(-Math.PI / 2);
 
-  //   var k = 0
-  //   for (let i = -1; i < 85; i += 5) {
-  //     if (i < 36 || i > 46) {
-  //       cube1 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //       cube1.position.set(i, 2.5, 4.8);
-  //       obj.add(cube1);
-  //       cube2 =  new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //       cube2.position.set(i, 2.5, -35.6);
-  //       obj.add(cube2);
-  //       coins_array.push(cube1);
-  //       coins_array.push(cube2);
-  //     }
-  //   }
+    var k = 0
+    for (let i = -1; i < 85; i += 5) {
+      if (i < 36 || i > 46) {
+        cube1 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
+        cube1.position.set(i, 2.5, 4.8);
+        obj.add(cube1);
+        cube2 =  new THREE.Mesh(cube ,textures_array[k]); k+=1;
+        cube2.position.set(i, 2.5, -35.6);
+        obj.add(cube2);
+        coins_array.push(cube1);
+        coins_array.push(cube2);
+      }
+    }
 
-  //   for (let i = 0; i < 84; i += 5) {
-  //     if (i < 34 || i > 47.5) {
-  //       cube1 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //       cube1.position.set(i, 2.5, 3.6);
-  //       obj.add(cube1);
-  //       cube2 =  new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //       cube2.position.set(i, 2.5, -34.3);
-  //       obj.add(cube2);
-  //       coins_array.push(cube1);
-  //       coins_array.push(cube2);
-  //     }
-  //   }
+    for (let i = 0; i < 84; i += 5) {
+      if (i < 34 || i > 47.5) {
+        cube1 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
+        cube1.position.set(i, 2.5, 3.6);
+        obj.add(cube1);
+        cube2 =  new THREE.Mesh(cube ,textures_array[k]); k+=1;
+        cube2.position.set(i, 2.5, -34.3);
+        obj.add(cube2);
+        coins_array.push(cube1);
+        coins_array.push(cube2);
+      }
+    }
 
 
-  //   for (let i = 2.5; i > -36.5; i -= 5) {
-  //     cube3 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //     cube3.position.set(-3.4, 2.5, i);
+    for (let i = 2.5; i > -36.5; i -= 5) {
+      cube3 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
+      cube3.position.set(-3.4, 2.5, i);
       
-  //     obj.add(cube3);
-  //     cube33 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //     cube33.position.set(-2, 2.5, i);
-  //     cube33.rotateY(-Math.PI / 2);
-  //     obj.add(cube33);
-  //     cube4 =  new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //     cube4.position.set(85.7, 2.5, i);
-  //     cube4.rotateY(-Math.PI / 2);
-  //     obj.add(cube4);
-  //     cube5 =  new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //     cube5.position.set(84.3, 2.5, i);
-  //     cube5.rotateY(-Math.PI / 2);
-  //     obj.add(cube5)
+      obj.add(cube3);
+      cube33 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
+      cube33.position.set(-2, 2.5, i);
+      cube33.rotateY(-Math.PI / 2);
+      obj.add(cube33);
+      cube4 =  new THREE.Mesh(cube ,textures_array[k]); k+=1;
+      cube4.position.set(85.7, 2.5, i);
+      cube4.rotateY(-Math.PI / 2);
+      obj.add(cube4);
+      cube5 =  new THREE.Mesh(cube ,textures_array[k]); k+=1;
+      cube5.position.set(84.3, 2.5, i);
+      cube5.rotateY(-Math.PI / 2);
+      obj.add(cube5)
 
-  //     if (i > -25 ) {
-  //       cube1 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //       cube1.position.set(36, 2.5, i);
-  //       cube1.rotateY(-Math.PI / 2);
-  //       obj.add(cube1);
-  //       cube11 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //       cube11.position.set(35, 2.5, i);
-  //       cube11.rotateY(-Math.PI / 2);
-  //       obj.add(cube11);
-  //       cube2 =  new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //       cube2.position.set(46.1, 2.5, i);
-  //       cube2.rotateY(-Math.PI / 2);
-  //       obj.add(cube2);
-  //       cube22 =  new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //       cube22.position.set(47.4, 2.5, i);
-  //       cube22.rotateY(-Math.PI / 2);
-  //       obj.add(cube22);
+      if (i > -25 ) {
+        cube1 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
+        cube1.position.set(36, 2.5, i);
+        cube1.rotateY(-Math.PI / 2);
+        obj.add(cube1);
+        cube11 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
+        cube11.position.set(35, 2.5, i);
+        cube11.rotateY(-Math.PI / 2);
+        obj.add(cube11);
+        cube2 =  new THREE.Mesh(cube ,textures_array[k]); k+=1;
+        cube2.position.set(46.1, 2.5, i);
+        cube2.rotateY(-Math.PI / 2);
+        obj.add(cube2);
+        cube22 =  new THREE.Mesh(cube ,textures_array[k]); k+=1;
+        cube22.position.set(47.4, 2.5, i);
+        cube22.rotateY(-Math.PI / 2);
+        obj.add(cube22);
 
 
-  //       coins_array.push(cube1);
-  //       coins_array.push(cube11);
-  //       coins_array.push(cube2); 
-  //       coins_array.push(cube22);
-  //     }  
+        coins_array.push(cube1);
+        coins_array.push(cube11);
+        coins_array.push(cube2); 
+        coins_array.push(cube22);
+      }  
 
-  //     if (i < -5) {
-  //       cube6 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //       cube6.position.set(65.1, 2.5, i);
-  //       cube6.rotateY(-Math.PI / 2);
-  //       obj.add(cube6);
-  //       cube66 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //       cube66.position.set(66.6, 2.5, i);
-  //       cube66.rotateY(-Math.PI / 2);
-  //       obj.add(cube66);
-  //       coins_array.push(cube6); 
-  //       coins_array.push(cube66);
+      if (i < -5) {
+        cube6 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
+        cube6.position.set(65.1, 2.5, i);
+        cube6.rotateY(-Math.PI / 2);
+        obj.add(cube6);
+        cube66 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
+        cube66.position.set(66.6, 2.5, i);
+        cube66.rotateY(-Math.PI / 2);
+        obj.add(cube66);
+        coins_array.push(cube6); 
+        coins_array.push(cube66);
         
-  //     }        
-  //     coins_array.push(cube3);
-  //     coins_array.push(cube33);
-  //     coins_array.push(cube4); 
-  //     coins_array.push(cube5);  
-  //   }
+      }        
+      coins_array.push(cube3);
+      coins_array.push(cube33);
+      coins_array.push(cube4); 
+      coins_array.push(cube5);  
+    }
 
-  //   cube7 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //   cube7.position.set(79.5, 2.5, -15.8);  
-  //   obj.add(cube7);
-  //   cube77 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //   cube77.position.set(79.5, 2.5, -14.6);
-  //   obj.add(cube77);
-  //   coins_array.push(cube7); 
-  //   coins_array.push(cube77);
+    cube7 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
+    cube7.position.set(79.5, 2.5, -15.8);  
+    obj.add(cube7);
+    cube77 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
+    cube77.position.set(79.5, 2.5, -14.6);
+    obj.add(cube77);
+    coins_array.push(cube7); 
+    coins_array.push(cube77);
 
-  //   cube8 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //   cube8.position.set(11.5, 2.5, -15.8);  
-  //   obj.add(cube8);
-  //   cube88 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //   cube88.position.set(11.5, 2.5, -14.6);
-  //   obj.add(cube88);
-  //   coins_array.push(cube8); 
-  //   coins_array.push(cube88);
+    cube8 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
+    cube8.position.set(11.5, 2.5, -15.8);  
+    obj.add(cube8);
+    cube88 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
+    cube88.position.set(11.5, 2.5, -14.6);
+    obj.add(cube88);
+    coins_array.push(cube8); 
+    coins_array.push(cube88);
 
-  //   cube9 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //   cube9.position.set(21.5, 2.5, -15.8);  
-  //   obj.add(cube9);
-  //   cube99 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //   cube99.position.set(21.5, 2.5, -14.6);
-  //   obj.add(cube99);
-  //   coins_array.push(cube9); 
-  //   coins_array.push(cube99);
+    cube9 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
+    cube9.position.set(21.5, 2.5, -15.8);  
+    obj.add(cube9);
+    cube99 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
+    cube99.position.set(21.5, 2.5, -14.6);
+    obj.add(cube99);
+    coins_array.push(cube9); 
+    coins_array.push(cube99);
 
-  //   cube10 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //   cube10.position.set(15.5, 2.5, -20.8);  
-  //   cube10.rotateY(-Math.PI / 2);
-  //   obj.add(cube10);
-  //   cube101 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //   cube101.position.set(15.5, 2.5, -9.6);
-  //   cube101.rotateY(-Math.PI / 2);
-  //   obj.add(cube101);
-  //   coins_array.push(cube101); 
-  //   coins_array.push(cube10);
+    cube10 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
+    cube10.position.set(15.5, 2.5, -20.8);  
+    cube10.rotateY(-Math.PI / 2);
+    obj.add(cube10);
+    cube101 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
+    cube101.position.set(15.5, 2.5, -9.6);
+    cube101.rotateY(-Math.PI / 2);
+    obj.add(cube101);
+    coins_array.push(cube101); 
+    coins_array.push(cube10);
 
-  //   cube102 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //   cube102.position.set(17, 2.5, -20.8); 
-  //   cube102.rotateY(-Math.PI / 2); 
-  //   obj.add(cube102);
-  //   cube103 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
-  //   cube103.position.set(17, 2.5, -9.6);
-  //   cube103.rotateY(-Math.PI / 2);
-  //   obj.add(cube103);
-  //   coins_array.push(cube103); 
-  //   coins_array.push(cube102);    
-  //   console.log(coins_array.length);
-  //   scene.add(obj);
-  //   obj.position.set(-350, 0, -150);
-  //   obj.rotateY(-Math.PI / 2); 
-  //   obj.scale.set(3, 3, 3);
-  // });
+    cube102 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
+    cube102.position.set(17, 2.5, -20.8); 
+    cube102.rotateY(-Math.PI / 2); 
+    obj.add(cube102);
+    cube103 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
+    cube103.position.set(17, 2.5, -9.6);
+    cube103.rotateY(-Math.PI / 2);
+    obj.add(cube103);
+    coins_array.push(cube103); 
+    coins_array.push(cube102);    
+    console.log(coins_array.length);
+    scene.add(obj);
+    obj.position.set(-350, 0, -150);
+    obj.rotateY(-Math.PI / 2); 
+    obj.name = "Museum1"
+    obj.scale.set(3, 3, 3);
+
+  });
   raycaster = new THREE.Raycaster();
 
   renderer = new THREE.WebGLRenderer({
@@ -574,7 +576,8 @@ function onMouseDown() {
   if (controlsEnabled === true) {
      console.log("Click");
      raycaster.setFromCamera( mouse, camera );
-     var intersects = raycaster.intersectObjects(scene.getObjectByName("Museum",true).children);
+     both_coins = (scene.getObjectByName("Museum",true).children).concat(scene.getObjectByName("Museum1",true).children)
+     var intersects = raycaster.intersectObjects(both_coins);
      if ( intersects.length > 0 ) {
       if ( INTERSECTED != intersects[ 0 ].object ) {
         $("#infoBox").text("") // sets text to empty
@@ -642,12 +645,19 @@ function animate() {
       canJump = true;
 
     }
+    
+    // if (controls.getObject().position.x < -100) {
+
+    //   // velocity.x = 0;
+    //   // console.log(controls.getObject().position.x);
+    //   controls.getObject().position.x = -100;
+
+    //   canJump = true;
+
+    // }
 
     prevTime = time;
 
-    
-  
-  //  Necesito la cruz del centro y con el click obtener la pocicion 
   renderer.render(scene, camera);
   }
 }

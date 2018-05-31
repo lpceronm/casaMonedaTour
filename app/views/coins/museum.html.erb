@@ -5,51 +5,76 @@
     (W, A, S, D = Move, SPACE = Jump, MOUSE = Look around)
   </div>
 </div>
+<div id="infoBox" title="Demo Information" style=" ">
+This is a demo, part of a collection at
+<a href="http://stemkoski.github.io/Three.js/">http://stemkoski.github.io/Three.js/</a>
+</div>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<link rel=stylesheet href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+<%= javascript_include_tag 'coins' %>
+<script>
+$(function()
+{
+	 $("#infoBox")
+	.css(
+	{
+	   "background":"rgba(255,255,255,0.5)"
+	})
+	.dialog({ autoOpen: false,
+		show: { effect: 'fade', duration: 500 },
+		hide: { effect: 'fade', duration: 500 }
+	});
+
+	 $("#infoButton")
+       .text("") // sets text to empty
+	.css(
+	{ "z-index":"2",
+	  "background":"rgba(0,0,0,0)", "opacity":"0.9",
+	  "position":"absolute", "top":"4px", "left":"4px"
+	}) // adds CSS
+    .append("<img width='32' height='32' src='images/icon-info.png'/>")
+    .button()
+	.click(
+		function()
+		{
+			$("#infoBox").dialog("open");
+		});
+});
+</script>
 <script>
 var camera, scene, renderer, controls;
 
 var objects = [];
 
 var raycaster;
+var mouse = new THREE.Vector2(), INTERSECTED;
+var currentIntersected, sphereInter ;
+
 
 var blocker = document.getElementById('blocker');
 var instructions = document.getElementById('instructions');
-
-// http://www.html5rocks.com/en/tutorials/pointerlock/intro/
-
 var havePointerLock = 'pointerLockElement' in document || 'mozPointerLockElement' in document ||
   'webkitPointerLockElement' in document;
 
 if (havePointerLock) {
-
   var element = document.body;
-
   var pointerlockchange = function (event) {
-
     if (document.pointerLockElement === element || document.mozPointerLockElement === element || document.webkitPointerLockElement ===
       element) {
-
       controlsEnabled = true;
       controls.enabled = true;
-
       blocker.style.display = 'none';
-
     } else {
-
       controls.enabled = false;
-
       blocker.style.display = 'block';
-
       instructions.style.display = '';
-
     }
 
   };
 
   var pointerlockerror = function (event) {
-
     instructions.style.display = '';
-
   };
 
   // Hook pointer lock state change events
@@ -62,19 +87,13 @@ if (havePointerLock) {
   document.addEventListener('webkitpointerlockerror', pointerlockerror, false);
 
   instructions.addEventListener('click', function (event) {
-
     instructions.style.display = 'none';
-
-    // Ask the browser to lock the pointer
     element.requestPointerLock = element.requestPointerLock || element.mozRequestPointerLock || element.webkitRequestPointerLock;
     element.requestPointerLock();
-
   }, false);
 
 } else {
-
   instructions.innerHTML = 'Your browser doesn\'t seem to support Pointer Lock API';
-
 }
 
 var controlsEnabled = false;
@@ -96,7 +115,7 @@ animate();
 
 function init() {
   camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 1000);
-  camera.translateY(16);
+  // camera.translateY(16);
 
   scene = new THREE.Scene();
   scene.background = new THREE.Color(0xffffff);
@@ -138,6 +157,10 @@ function init() {
         canJump = false;
         break;
 
+      case 67:
+        $("#infoBox").dialog("close")
+        break;
+
     }
 
   };
@@ -173,10 +196,7 @@ function init() {
   document.addEventListener('keydown', onKeyDown, false);
   document.addEventListener('keyup', onKeyUp, false);
 
-  raycaster = new THREE.Raycaster(new THREE.Vector3(), new THREE.Vector3(0, -1, 0), 0, 10);
-
   // floor
-
   geometry = new THREE.PlaneGeometry(800, 800, 0, 0);
   geometry.rotateX(-Math.PI / 2);
   floorTexture = new THREE.TextureLoader().load(
@@ -360,9 +380,9 @@ function init() {
     console.log(coins_array.length);
     scene.add(obj);
     obj.position.set(-80, 0, 0);
+    obj.name = "Museum"
     obj.scale.set(3, 3, 3);
-
-
+    objects = coins_array
   });
 
 var objectLoader1 = new THREE.ObjectLoader();
@@ -516,30 +536,7 @@ var objectLoader1 = new THREE.ObjectLoader();
     obj.scale.set(3, 3, 3);
   });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  raycaster = new THREE.Raycaster();
   renderer = new THREE.WebGLRenderer({
     antialias: true
   });
@@ -549,6 +546,7 @@ var objectLoader1 = new THREE.ObjectLoader();
   document.body.appendChild(renderer.domElement);
 
   //
+  document.addEventListener( 'mousedown', onMouseDown, false );
 
   window.addEventListener('resize', onWindowResize, false);
 
@@ -560,6 +558,37 @@ function onWindowResize() {
   camera.updateProjectionMatrix();
 
   renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+// function onDocumentMouseMove( event ) {
+//   event.preventDefault();
+//   mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+//   mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+// }
+
+
+function onMouseDown() {
+
+  if (controlsEnabled === true) {
+     console.log("Click");
+     raycaster.setFromCamera( mouse, camera );
+     var intersects = raycaster.intersectObjects(scene.getObjectByName("Museum",true).children);
+     if ( intersects.length > 0 ) {
+      if ( INTERSECTED != intersects[ 0 ].object ) {
+        $("#infoBox").text("") // sets text to empty
+        $("#infoBox").append(intersects[0].object.uuid) // sets text to empty
+        $("#infoBox").dialog("open");
+
+      }else{
+        console.log("found");
+      }
+    } else {
+      console.log("Paila");
+    }
+  }
+
+
+
 
 }
 
@@ -569,13 +598,14 @@ function animate() {
 
   if (controlsEnabled === true) {
 
-    raycaster.ray.origin.copy(controls.getObject().position);
-    raycaster.ray.origin.y -= 10;
 
-    var intersections = raycaster.intersectObjects(objects);
+    // console.log(scene.getObjectByName("Museum",true));
 
-    var onObject = intersections.length > 0;
+// scene.getChildByName("Museum",true)
 
+
+
+    // var onObject = intersects.length > 0;
     var time = performance.now();
     var delta = (time - prevTime) / 1000;
 
@@ -591,12 +621,12 @@ function animate() {
     if (moveForward || moveBackward) velocity.z -= direction.z * 400.0 * delta;
     if (moveLeft || moveRight) velocity.x -= direction.x * 400.0 * delta;
 
-    if (onObject === true) {
+    // if (onObject === true) {
 
-      velocity.y = Math.max(0, velocity.y);
-      canJump = true;
+    //   velocity.y = Math.max(0, velocity.y);
+    //   canJump = true;
 
-    }
+    // }
 
     controls.getObject().translateX(velocity.x * delta);
     controls.getObject().translateY(velocity.y * delta);
@@ -628,10 +658,11 @@ function animate() {
     }
     prevTime = time;
 
-  }
 
+
+  //  Necesito la cruz del centro y con el click obtener la pocicion
   renderer.render(scene, camera);
-
+  }
 }
 
 

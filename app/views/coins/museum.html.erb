@@ -19,27 +19,27 @@ $(function()
 	 $("#infoBox")
 	.css(
 	{
-	   "background":"rgba(255,255,255,0.5)"
+	   "background":"rgba(255,255,255,0.5)", "width":"20px", "height": "20%"
 	})
 	.dialog({ autoOpen: false,
 		show: { effect: 'fade', duration: 500 },
-		hide: { effect: 'fade', duration: 500 }
+		hide: { effect: 'fade', duration: 500 },
 	});
 
-	 $("#infoButton")
-       .text("") // sets text to empty
-	.css(
-	{ "z-index":"2",
-	  "background":"rgba(0,0,0,0)", "opacity":"0.9",
-	  "position":"absolute", "top":"4px", "left":"4px"
-	}) // adds CSS
-    .append("<img width='32' height='32' src='images/icon-info.png'/>")
-    .button()
-	.click(
-		function()
-		{
-			$("#infoBox").dialog("open");
-		});
+	//  $("#infoButton")
+  //      .text("") // sets text to empty
+	// .css(
+	// { "z-index":"2",
+	//   "background":"rgba(0,0,0,0)", "opacity":"0.9",
+	//   "position":"absolute", "top":"4px", "left":"4px"
+	// }) // adds CSS
+  //   .append("<img width='32' height='32' src='images/icon-info.png'/>")
+  //   .button()
+	// .click(
+	// 	function()
+	// 	{
+	// 		$("#infoBox").dialog("open");
+	// 	});
 });
 </script>
 <script>
@@ -115,7 +115,7 @@ animate();
 
 function init() {
   camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 1000);
-  // camera.translateY(16);
+  camera.translateY(5);
 
   scene = new THREE.Scene();
   scene.background = new THREE.Color(0xffffff);
@@ -209,6 +209,9 @@ function init() {
     mesh = new THREE.Mesh(geometry, material);
   scene.add(mesh);
 
+
+
+
   // var geometry = new THREE.SphereGeometry(40, 40, 40, 0, Math.PI *2, 0, 0.5*Math.PI);
   // // var link = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRayHLURKisL2wZawPCnx-J-ahowfDwQ1MNjsPR2MtQVYn1QNfn'
   // var link = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTor4EAHb7F7hxsro75fqTODuZ8tMU06X_DmsjAddVTs-blsYiT'
@@ -235,11 +238,21 @@ function init() {
   objectLoader.load("../assets/model_plan/coinmuseum.json", function (obj) {
 
 
-    cube = new THREE.CubeGeometry(3, 3, 0.2)
+    cube = new THREE.CubeGeometry(3, 3, 0.2);
 
     var coins_array = [];
 
-    var k = 0
+    var k = 0;
+
+    test = new THREE.CylinderGeometry(4, 4, 0.5,30,0.2);
+    tempcoin = new THREE.Mesh(test, textures_array[k] );
+    tempcoin.position.set( 20, 15, 0);
+    tempcoin.name = "Coin"
+    tempcoin.rotateX(-Math.PI/2)
+    scene.add(tempcoin);
+    
+
+    
     for (let i = -1; i < 85; i += 5) {
       if (i < 36 || i > 46) {
         cube1 = new THREE.Mesh(cube ,textures_array[k]); k+=1
@@ -571,8 +584,23 @@ function onMouseDown() {
      if ( intersects.length > 0 ) {
       if ( INTERSECTED != intersects[ 0 ].object ) {
         $("#infoBox").text("") // sets text to empty
-        $("#infoBox").append(intersects[0].object.uuid) // sets text to empty
+        $("#infoBox").append(intersects[0].object.uuid+"<br>") // sets text to empty
         $("#infoBox").dialog("open");
+          var temp = scene.getObjectByName("Coin");
+          //objeto
+          // console.log(intersects[ 0 ].object.material.map.image.currentSrc);
+
+          // console.log(camera.position.x, camera.position.y, camera.position.z);
+          // console.log(controls.getObject().position.x, 15, controls.getObject().position.z);
+          //console.log(intersects[ 0 ].object.position.x, intersects[ 0 ].object.position.y, intersects[ 0 ].object.position.z);
+          camera.add(temp);
+          temp.position.set(8, 7, -30);
+          floorTexture1 = new THREE.TextureLoader().load(intersects[ 0 ].object.material.map.image.currentSrc);
+          floorTexture1.wrapS = floorTexture1.wrapT = THREE.RepeatWrapping;
+          temp.material.map = floorTexture1;
+
+
+          //temp.position.set(controls.getObject().position.x, 15, (controls.getObject().position.z )- 30);
 
       }else{
         console.log("found");
@@ -586,6 +614,7 @@ function onMouseDown() {
 
 
 }
+
 
 function animate() {
 

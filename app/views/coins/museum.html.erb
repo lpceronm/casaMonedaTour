@@ -385,11 +385,13 @@ function init() {
     objects = coins_array
   });
 
-var objectLoader1 = new THREE.ObjectLoader();
+  var objectLoader1 = new THREE.ObjectLoader();
   objectLoader1.load("../assets/model_plan/coinmuseum.json", function (obj) {
-      cube = new THREE.CubeGeometry(3, 3, 0.2)
+      // cube = new THREE.CubeGeometry(3, 3, 0.2)
+    var coins_array = [];
 
-      var coins_array = [];
+    cube = new THREE.CylinderGeometry(2, 2, 0.5,30,0.2)
+    cube.rotateX(-Math.PI / 2);
 
     var k = 0
     for (let i = -1; i < 85; i += 5) {
@@ -422,7 +424,7 @@ var objectLoader1 = new THREE.ObjectLoader();
     for (let i = 2.5; i > -36.5; i -= 5) {
       cube3 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
       cube3.position.set(-3.4, 2.5, i);
-      cube3.rotateY(-Math.PI / 2);
+      
       obj.add(cube3);
       cube33 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
       cube33.position.set(-2, 2.5, i);
@@ -454,8 +456,6 @@ var objectLoader1 = new THREE.ObjectLoader();
         cube22.position.set(47.4, 2.5, i);
         cube22.rotateY(-Math.PI / 2);
         obj.add(cube22);
-
-
         coins_array.push(cube1);
         coins_array.push(cube11);
         coins_array.push(cube2);
@@ -533,6 +533,7 @@ var objectLoader1 = new THREE.ObjectLoader();
     scene.add(obj);
     obj.position.set(-350, 0, -150);
     obj.rotateY(-Math.PI / 2);
+    obj.name = "Museum1"
     obj.scale.set(3, 3, 3);
   });
 
@@ -560,19 +561,13 @@ function onWindowResize() {
   renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
-// function onDocumentMouseMove( event ) {
-//   event.preventDefault();
-//   mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
-//   mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
-// }
-
-
 function onMouseDown() {
 
   if (controlsEnabled === true) {
      console.log("Click");
      raycaster.setFromCamera( mouse, camera );
-     var intersects = raycaster.intersectObjects(scene.getObjectByName("Museum",true).children);
+     both_coins = (scene.getObjectByName("Museum",true).children).concat(scene.getObjectByName("Museum1",true).children)
+     var intersects = raycaster.intersectObjects(both_coins);
      if ( intersects.length > 0 ) {
       if ( INTERSECTED != intersects[ 0 ].object ) {
         $("#infoBox").text("") // sets text to empty
@@ -598,14 +593,6 @@ function animate() {
 
   if (controlsEnabled === true) {
 
-
-    // console.log(scene.getObjectByName("Museum",true));
-
-// scene.getChildByName("Museum",true)
-
-
-
-    // var onObject = intersects.length > 0;
     var time = performance.now();
     var delta = (time - prevTime) / 1000;
 
@@ -621,12 +608,6 @@ function animate() {
     if (moveForward || moveBackward) velocity.z -= direction.z * 400.0 * delta;
     if (moveLeft || moveRight) velocity.x -= direction.x * 400.0 * delta;
 
-    // if (onObject === true) {
-
-    //   velocity.y = Math.max(0, velocity.y);
-    //   canJump = true;
-
-    // }
 
     controls.getObject().translateX(velocity.x * delta);
     controls.getObject().translateY(velocity.y * delta);
@@ -640,7 +621,6 @@ function animate() {
       canJump = true;
 
     }
-
     if( controls.getObject().position.x > 210 ){
       velocity.x = 0;
       controls.getObject().position.x = 210;
@@ -658,9 +638,6 @@ function animate() {
     }
     prevTime = time;
 
-
-
-  //  Necesito la cruz del centro y con el click obtener la pocicion
   renderer.render(scene, camera);
   }
 }

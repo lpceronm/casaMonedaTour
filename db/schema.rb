@@ -16,17 +16,17 @@ ActiveRecord::Schema.define(version: 2018_05_26_172456) do
   enable_extension "plpgsql"
 
   create_table "coins", force: :cascade do |t|
-    t.string "name"
+    t.string "name" null:true
     t.string "num_record"
     t.string "material"
     t.string "country"
     t.string "denomination"
     t.string "batch"
-    t.text "location"
+    t.string "location"
     t.string "issuer"
     t.string "serial_number"
-    t.integer "part_number"
-    t.integer "quantity"
+    t.string "part_number"
+    t.string "quantity"
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

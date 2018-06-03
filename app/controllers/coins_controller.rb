@@ -10,6 +10,10 @@ class CoinsController < ApplicationController
       name = 'image' + i.to_s + '.png'
       @test_info << folder_path + name
     end
+
+    @coins_all = Coin.all
+
+    
   end
   
   def index

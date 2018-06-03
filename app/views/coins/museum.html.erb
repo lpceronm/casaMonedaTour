@@ -11,6 +11,7 @@ This is a demo, part of a collection at
 </div>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
 <link rel=stylesheet href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
 <%= javascript_include_tag 'coins' %>
 <script>
@@ -117,9 +118,44 @@ function init() {
   camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 1000);
   camera.translateY(5);
 
+  var geometry1 = new THREE.Geometry();
+  var material1 = new THREE.LineBasicMaterial({ color: 0x1B1722 });
+  var y = 1;
+  var x = 1;
+
+  // crosshair
+  geometry1.vertices.push(new THREE.Vector3(0, y, 0));
+  geometry1.vertices.push(new THREE.Vector3(0, -y, 0));
+  geometry1.vertices.push(new THREE.Vector3(0, 0, 0));
+  geometry1.vertices.push(new THREE.Vector3(x, 0, 0));  
+  geometry1.vertices.push(new THREE.Vector3(-x, 0, 0));
+
+  var crosshair = new THREE.Line( geometry1, material1 );
+
+  // place it in the center
+  var crosshairPercentX = 50;
+  var crosshairPercentY = 50;
+  var crosshairPositionX = (crosshairPercentX / 100) * 2 - 1;
+  var crosshairPositionY = (crosshairPercentY / 100) * 2 - 1;
+ 
+  //scene.add( camera );
+
   scene = new THREE.Scene();
   scene.background = new THREE.Color(0xffffff);
   scene.fog = new THREE.Fog(0xffffff, 0, 750);
+
+  //scene.add( camera );
+  scene.add(crosshair);
+  camera.add( crosshair );
+
+  /*crosshair.position.x = crosshairPositionX * camera.aspect;
+  crosshair.position.y = crosshairPositionY;
+
+  crosshair.position.z = -0.3;
+  */
+
+  crosshair.position.set(0,2,-30);
+
 
   var light = new THREE.HemisphereLight(0xeeeeff, 0x777788, 0.75);
   light.position.set(0.5, 1, 0.75);
@@ -127,6 +163,38 @@ function init() {
 
   controls = new THREE.PointerLockControls(camera);
   scene.add(controls.getObject());
+
+  // DAT.GUI Related Stuff
+
+  /*var gui = new dat.GUI();
+
+  var cam = gui.addFolder('Camera');
+  cam.add(options.camera, 'speed', 0, 0.0010).listen();
+  cam.add(camera.position, 'y', 0, 100).listen();
+  cam.open();
+
+  var velocity = gui.addFolder('Velocity');
+  velocity.add(options, 'velx', -0.2, 0.2).name('X').listen();
+  velocity.add(options, 'vely', -0.2, 0.2).name('Y').listen();
+  velocity.open();
+
+  var box = gui.addFolder('Cube');
+  box.add(cube.scale, 'x', 0, 3).name('Width').listen();
+  box.add(cube.scale, 'y', 0, 3).name('Height').listen();
+  box.add(cube.scale, 'z', 0, 3).name('Length').listen();
+  box.add(cube.material, 'wireframe').listen();
+  box.open();
+
+  gui.add(options, 'stop');
+  gui.add(options, 'reset');
+  */
+
+
+
+
+
+
+
 
   var onKeyDown = function (event) {
 
@@ -210,8 +278,6 @@ function init() {
   scene.add(mesh);
 
 
-
-
   // var geometry = new THREE.SphereGeometry(40, 40, 40, 0, Math.PI *2, 0, 0.5*Math.PI);
   // // var link = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRayHLURKisL2wZawPCnx-J-ahowfDwQ1MNjsPR2MtQVYn1QNfn'
   // var link = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTor4EAHb7F7hxsro75fqTODuZ8tMU06X_DmsjAddVTs-blsYiT'
@@ -223,9 +289,60 @@ function init() {
   // ceiling.material.side = THREE.BackSide;
 
   // scene.add(ceiling);
-  var textures_array = []
+  
+  /*var textures_array = []
+
     <% @test_info.each do |coin| %>
        path = '<%=coin%>'
+     
+       floorTexture1 = new THREE.TextureLoader().load(path);
+       floorTexture1.wrapS = floorTexture1.wrapT = THREE.RepeatWrapping;
+       textureMesh =  new THREE.MeshBasicMaterial({
+         map: floorTexture1
+       })
+      textures_array.push(textureMesh);
+    <% end %>*/
+  
+
+  var information = {};
+  
+
+  for( var i=0; i< 180; i++) {
+    information[i] = {
+                "id": 0,   
+                "name":"",
+                "num_record":"",
+                "material":"",
+                "country":"",
+                "denomination":"",
+                "batch":"",
+                "location":"",
+                "issuer":"",
+                "serial_number":"",
+                "part_number":"",
+                "quantity":"",
+                "image":"",
+                "created_at":"",
+                "updated_at":""
+     }
+  }
+    
+  //console.log(information[0].A);
+
+    <% @coins_all.each do |type| %>
+       information[0].id = '<%=type.id%>'
+       information[0].name = '<%=type.name%>'
+       information[0].num_record = '<%=type.num_record%>'
+       information[0].material = '<%=type.material%>'
+       information[0].country = '<%=type.country%>'
+       information[0].denomination = '<%=type.denomination%>'    
+    <% end %>
+  
+  var textures_array = []
+
+    <% @test_info.each do |coin| %>
+       path = '<%=coin%>'
+       information[0].A = path;
        floorTexture1 = new THREE.TextureLoader().load(path);
        floorTexture1.wrapS = floorTexture1.wrapT = THREE.RepeatWrapping;
        textureMesh =  new THREE.MeshBasicMaterial({
@@ -234,11 +351,30 @@ function init() {
       textures_array.push(textureMesh);
     <% end %>
 
+  
+  
+  //information[0].B = '<% @coins_all[0] %>';
+
+
+  
+    
+
+
+  console.log(information[0].B);
+
+
+  
+
+  
+
+
+
   var objectLoader = new THREE.ObjectLoader();
   objectLoader.load("../assets/model_plan/coinmuseum.json", function (obj) {
 
 
     cube = new THREE.CubeGeometry(3, 3, 0.2);
+    
 
     var coins_array = [];
 
@@ -257,9 +393,11 @@ function init() {
       if (i < 36 || i > 46) {
         cube1 = new THREE.Mesh(cube ,textures_array[k]); k+=1
         cube1.position.set(i, 2.5, 4.8);
+        cube1.name = information;
         obj.add(cube1);
         cube2 =  new THREE.Mesh(cube ,textures_array[k]); k+=1
         cube2.position.set(i, 2.5, -35.6);
+        cube2.name = information;
         obj.add(cube2);
         coins_array.push(cube1);
         coins_array.push(cube2);
@@ -270,9 +408,11 @@ function init() {
       if (i < 34 || i > 47.5) {
         cube1 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
         cube1.position.set(i, 2.5, 3.6);
+        cube1.name = information;
         obj.add(cube1);
         cube2 =  new THREE.Mesh(cube ,textures_array[k]); k+=1;
         cube2.position.set(i, 2.5, -34.3);
+        cube2.name = information;
         obj.add(cube2);
         coins_array.push(cube1);
         coins_array.push(cube2);
@@ -284,10 +424,12 @@ function init() {
       cube3 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
       cube3.position.set(-3.4, 2.5, i);
       cube3.rotateY(-Math.PI / 2);
+      cube3.name = information;
       obj.add(cube3);
       cube33 = new THREE.Mesh(cube ,textures_array[k]); k+=1;
       cube33.position.set(-2, 2.5, i);
       cube33.rotateY(-Math.PI / 2);
+      cube33.name = information;
       obj.add(cube33);
       cube4 =  new THREE.Mesh(cube ,textures_array[k]); k+=1;
       cube4.position.set(85.7, 2.5, i);
@@ -584,15 +726,16 @@ function onMouseDown() {
      if ( intersects.length > 0 ) {
       if ( INTERSECTED != intersects[ 0 ].object ) {
         $("#infoBox").text("") // sets text to empty
-        $("#infoBox").append(intersects[0].object.uuid+"<br>") // sets text to empty
+        $("#infoBox").append(intersects[0].object.name[0].id+"<br><br>"+
+                             intersects[0].object.name[0].name+"<br><br>"+
+                             intersects[0].object.name[0].num_record+"<br><br>"+
+                             intersects[0].object.name[0].material+"<br><br>"+
+                             intersects[0].object.name[0].country+"<br><br>"+
+                             intersects[0].object.name[0].denomination+"<br><br>"
+                             ) // sets text to empty
         $("#infoBox").dialog("open");
           var temp = scene.getObjectByName("Coin");
-          //objeto
-          // console.log(intersects[ 0 ].object.material.map.image.currentSrc);
-
-          // console.log(camera.position.x, camera.position.y, camera.position.z);
-          // console.log(controls.getObject().position.x, 15, controls.getObject().position.z);
-          //console.log(intersects[ 0 ].object.position.x, intersects[ 0 ].object.position.y, intersects[ 0 ].object.position.z);
+          console.log(intersects[ 0 ].object);
           camera.add(temp);
           temp.position.set(8, 7, -30);
           floorTexture1 = new THREE.TextureLoader().load(intersects[ 0 ].object.material.map.image.currentSrc);
@@ -606,7 +749,7 @@ function onMouseDown() {
         console.log("found");
       }
     } else {
-      console.log("Paila");
+      console.log("Elemento no encontrado");
     }
   }
 

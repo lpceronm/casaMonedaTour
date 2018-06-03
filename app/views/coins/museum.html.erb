@@ -114,6 +114,17 @@ var vertex = new THREE.Vector3();
 var color = new THREE.Color();
 var coinPreview; 
 var previewCoinTexture1;
+var  params = {
+					bloomAmount: 1.0,
+					sunLight: 4.0,
+
+					enabled: true,
+					avgLuminance: 0.7,
+					middleGrey: 0.04,
+					maxLuminance: 16,
+
+					adaptionRate: 2.0
+				};
 
 init();
 animate();
@@ -123,12 +134,16 @@ function init() {
   camera.translateY(5);
 
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0xffffff);
+  scene.background = new THREE.Color(0x000000);
   scene.fog = new THREE.Fog(0xffffff, 0, 750);
 
   var light = new THREE.HemisphereLight(0xeeeeff, 0x777788, 0.75);
   light.position.set(0.5, 1, 0.75);
   scene.add(light);
+
+  directionalLight = new THREE.DirectionalLight( 0xffffff, params.sunLight );
+				directionalLight.position.set( 2, 0, 10 ).normalize();
+				scene.add( directionalLight );
 
   controls = new THREE.PointerLockControls(camera);
   scene.add(controls.getObject());
@@ -167,7 +182,7 @@ function init() {
         break;
 
       case 79:
-        if (params.bloomAmount > 1.0) {
+        if (params.bloomAmount > 0.0) {
           params.bloomAmount -= 0.2;
           sceneGui.updateDisplay();
         }
@@ -401,7 +416,6 @@ function init() {
     obj.add(cube103);
     coins_array.push(cube103);
     coins_array.push(cube102);
-    console.log(coins_array.length);
     scene.add(obj);
     obj.position.set(-80, 0, 0);
     obj.name = "Museum"
@@ -553,7 +567,6 @@ function init() {
     obj.add(cube103);
     coins_array.push(cube103);
     coins_array.push(cube102);
-    console.log(coins_array.length);
     scene.add(obj);
     obj.position.set(-350, 0, -150);
     obj.rotateY(-Math.PI / 2);
@@ -561,24 +574,14 @@ function init() {
     obj.scale.set(3, 3, 3);
   });
 
-  params = {
-					bloomAmount: 1.0,
-					sunLight: 4.0,
-
-					enabled: true,
-					avgLuminance: 0.7,
-					middleGrey: 0.04,
-					maxLuminance: 16,
-
-					adaptionRate: 2.0
-				};
+ 
 
 test = new THREE.CylinderGeometry(6, 6, 0.5,30,0.2);
 tempcoin = new THREE.Mesh(test, textures_array[0] );
 tempcoin.position.set( 20, 15, 0);
 tempcoin.name = "Coin"
 tempcoin.rotateX(-Math.PI/2)
-// scene.add(tempcoin);
+scene.add(tempcoin);
 
 var atmoShader = {
     side: THREE.BackSide,
@@ -683,15 +686,23 @@ var atmoShader = {
 
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.autoClear = false;
+	renderer.gammaInput = true;
+	renderer.gammaOutput = false;
 
   hdrToneMappingPass = new THREE.AdaptiveToneMappingPass( true, 256 );
 
 
   var parameters = { minFilter: THREE.LinearFilter, magFilter: THREE.LinearFilter, format: THREE.RGBAFormat, stencilBuffer: false };
+  if ( renderer.extensions.get('OES_texture_half_float_linear') ) {
+					parameters.type = THREE.FloatType;
+				}
   var hdrRenderTarget = new THREE.WebGLRenderTarget( 1000, 1000, parameters );
   hdrEffectComposer = new THREE.EffectComposer( renderer, hdrRenderTarget );
   var scenePass = new THREE.RenderPass( scene, camera, undefined, undefined, undefined );
   bloomPass = new THREE.BloomPass();
+  console.log(bloomPass);
+  
   var gammaCorrectionPass = new THREE.ShaderPass( THREE.GammaCorrectionShader );
 	gammaCorrectionPass.renderToScreen = true;
   hdrEffectComposer.addPass( scenePass );
@@ -739,8 +750,8 @@ function onMouseDown() {
           coinPreview = scene.getObjectByName("Coin");
           coinShaderPreview = scene.getObjectByName("CoinShader");
           
-          // camera.add(coinPreview);
-          // camera.add(coinShaderPreview);
+          camera.add(coinPreview);
+          camera.add(coinShaderPreview);
           coinShaderPreview.position.set(0, 7, -30);
           coinPreview.position.set(0, 7, -30);
           previewCoinTexture1 = new THREE.TextureLoader().load(intersects[ 0 ].object.material.map.image.currentSrc);
@@ -767,6 +778,9 @@ function animate() {
 
   if (controlsEnabled === true) {
 
+    if ( bloomPass ) {
+			bloomPass.copyUniforms[ "opacity" ].value = params.bloomAmount;
+		}
     var time = performance.now();
     var delta = (time - prevTime) / 1000;
 
@@ -813,6 +827,9 @@ function animate() {
     prevTime = time;
 
   renderer.render(scene, camera);
+  hdrEffectComposer.render( 0.17 );
+  directionalLight.intensity = params.sunLight;
+
   }
 }
 

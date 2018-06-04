@@ -15,7 +15,5 @@ Comandos para iniciar
 
 To do 
  
-* Hacer los filtros
-* Hacer el shader | 5.5 
-* Mostrar info monedas traida del back | 3
-* Evitar pasar paredes | 4 
+* Cambiar estilo del museo,
+* Investigar info para el read me

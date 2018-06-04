@@ -6,8 +6,7 @@
   </div>
 </div>
 <div id="infoBox" title="Demo Information" style=" ">
-This is a demo, part of a collection at
-<a href="http://stemkoski.github.io/Three.js/">http://stemkoski.github.io/Three.js/</a>
+
 </div>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
@@ -119,10 +118,8 @@ var  params = {
 					bloomAmount: 0.2,
 					sunLight: 4.0,
 					enabled: true,
-					avgLuminance: 0.7,
-					middleGrey: 0.04,
-					maxLuminance: 16,
-					adaptionRate: 2.0
+					middleGrey: 1.04,
+					maxLuminance: 16
 				};
 
 init();
@@ -218,21 +215,68 @@ function init() {
         coinPreviewShader.visible = false;
         break;
 
-      case 79:
+      case 49:
         if (params.bloomAmount > 0.0) {
-          params.bloomAmount -= 0.2;
+          params.bloomAmount -= 0.1;
           sceneGui.updateDisplay();
         }
-        console.log(params.bloomAmount);
         break;
 
-      case 80:
+      case 50:
         if ( params.bloomAmount < 10.0) {
-           params.bloomAmount += 0.2;
+           params.bloomAmount += 0.1;
            sceneGui.updateDisplay();
         }
-        console.log(params.bloomAmount);
-        break;    
+        break;
+
+      case 51:
+        if (params.sunLight > 0.1) {
+          params.sunLight -= 0.1;
+          sceneGui.updateDisplay();
+        }
+        break;
+
+      case 52:
+        if ( params.sunLight < 12.0) {
+           params.sunLight += 0.1;
+           sceneGui.updateDisplay();
+        }
+        break;  
+
+      case 53:
+        if (params.middleGrey > 0.04) {
+          params.middleGrey -= 0.1;
+          sceneGui.updateDisplay();
+        }
+        break;
+
+      case 54:
+        if ( params.middleGrey < 12.0) {
+           params.middleGrey += 0.1;
+           sceneGui.updateDisplay();
+        }
+        break;
+
+      case 55:
+        if (params.maxLuminance > 1.0) {
+          params.maxLuminance -= 1.0;
+          sceneGui.updateDisplay();
+        }
+        break;
+
+      case 56:
+        if ( params.maxLuminance < 30.0) {
+           params.maxLuminance += 1.0;
+           sceneGui.updateDisplay();
+        }
+        break;
+      case 82:
+        params.bloomAmount = 0.0;
+        params.sunLight = 4.0;
+        params.middleGrey = 1.04;
+        params.maxLuminance = 16.0;
+        sceneGui.updateDisplay();
+        break;  
     }
 
   };
@@ -293,21 +337,6 @@ function init() {
   // ceiling.material.side = THREE.BackSide;
 
   // scene.add(ceiling);
-  
-  /*var textures_array = []
-
-    <% @test_info.each do |coin| %>
-       path = '<%=coin%>'
-     
-       floorTexture1 = new THREE.TextureLoader().load(path);
-       floorTexture1.wrapS = floorTexture1.wrapT = THREE.RepeatWrapping;
-       textureMesh =  new THREE.MeshBasicMaterial({
-         map: floorTexture1
-       })
-      textures_array.push(textureMesh);
-    <% end %>*/
-  
-
   var information = {};
   
 
@@ -342,8 +371,6 @@ function init() {
        information[q].denomination = '<%=type.denomination%>' 
        q+=1;   
     <% end %>
-
-    console.log(information);
   
   var textures_array = []
 
@@ -360,23 +387,6 @@ function init() {
       textures_array.push(textureMesh);
     <% end %>
 
-  
-  
-  //information[0].B = '<% @coins_all[0] %>';
-
-
-  
-    
-
-
- // console.log(information[0]);
-
-
-  
-
-  
-
-  
   var e = 0;
 
   var objectLoader = new THREE.ObjectLoader();
@@ -823,28 +833,14 @@ var atmoShader = {
   scene.add(coinShader)
 
   var gui = new dat.GUI();
-
-  // dynamicHdrGui.add( params, 'projection', { 'From cam to mesh': 'camera', 'Normal to mesh': 'normal' } );
   var sceneGui = gui.addFolder( 'Scenes' );
-  // var toneMappingGui = gui.addFolder( 'ToneMapping' );
-  // var staticToneMappingGui = gui.addFolder( 'StaticOnly' );
-  // var adaptiveToneMappingGui = gui.addFolder( 'AdaptiveOnly' );
 
   sceneGui.add( params, 'bloomAmount', 0.0, 10.0 );
   sceneGui.add( params, 'sunLight', 0.1, 12.0 );
-
-  // toneMappingGui.add( params, 'enabled' );
-  // toneMappingGui.add( params, 'middleGrey', 0, 12 );
-  // toneMappingGui.add( params, 'maxLuminance', 1, 30 );
-
-  // staticToneMappingGui.add( params, 'avgLuminance', 0.001, 2.0 );
-  // adaptiveToneMappingGui.add( params, 'adaptionRate', 0.0, 10.0 );
-
+  sceneGui.add( params, 'middleGrey', 0, 12 );
+  sceneGui.add( params, 'maxLuminance', 1, 30 );
   sceneGui.open();
   gui.open();
-
-
-
 
   raycaster = new THREE.Raycaster();
   renderer = new THREE.WebGLRenderer({
@@ -860,15 +856,20 @@ var atmoShader = {
   hdrToneMappingPass = new THREE.AdaptiveToneMappingPass( true, 256 );
 
 
-  var parameters = { minFilter: THREE.LinearFilter, magFilter: THREE.LinearFilter, format: THREE.RGBAFormat, stencilBuffer: false };
+  var parameters = { 
+    minFilter: THREE.LinearFilter, 
+    magFilter: THREE.LinearFilter, 
+    format: THREE.RGBAFormat, 
+    stencilBuffer: false 
+    };
   if ( renderer.extensions.get('OES_texture_half_float_linear') ) {
-					parameters.type = THREE.FloatType;
-				}
+    parameters.type = THREE.FloatType;
+  }
   var hdrRenderTarget = new THREE.WebGLRenderTarget( 1000, 1000, parameters );
   hdrEffectComposer = new THREE.EffectComposer( renderer, hdrRenderTarget );
   var scenePass = new THREE.RenderPass( scene, camera, undefined, undefined, undefined );
   bloomPass = new THREE.BloomPass();
-  console.log(bloomPass);
+
   
   var gammaCorrectionPass = new THREE.ShaderPass( THREE.GammaCorrectionShader );
 	gammaCorrectionPass.renderToScreen = true;
@@ -960,10 +961,6 @@ function animate() {
   requestAnimationFrame(animate);
 
   if (controlsEnabled === true) {
-
-    if ( bloomPass ) {
-			bloomPass.copyUniforms[ "opacity" ].value = params.bloomAmount;
-		}
     var time = performance.now();
     var delta = (time - prevTime) / 1000;
 
@@ -1009,12 +1006,20 @@ function animate() {
     }
     prevTime = time;
 
-  renderer.render(scene, camera);
-  hdrEffectComposer.render( 0.17 );
+  if ( bloomPass ) {
+    bloomPass.copyUniforms[ "opacity" ].value = params.bloomAmount;
+  }
+  hdrToneMappingPass.setMaxLuminance( params.maxLuminance );
+  hdrToneMappingPass.setMiddleGrey( params.middleGrey );
   directionalLight.intensity = params.sunLight;
 
+  renderer.render(scene, camera);
+  hdrEffectComposer.render( 0.17 );
+ 
   }
 }
+
+
 
 
 

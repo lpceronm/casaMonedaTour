@@ -329,14 +329,14 @@ function init() {
   document.addEventListener('keyup', onKeyUp, false);
 
   
-  containerGeo = new THREE.CubeGeometry(550, 50, 350);
+  containerGeo = new THREE.CubeGeometry(600, 50, 430);
   var conMaterials = [ 
     new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('../assets/textures/cube/Park3Med/px.jpg'), side: THREE.DoubleSide}),
     new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('../assets/textures/cube/Park3Med/nx.jpg'), side: THREE.DoubleSide}),
-    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('../assets/textures/ceiling2.jpg'), side: THREE.DoubleSide}),
+    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('../assets/textures/ceiling.jpg'), side: THREE.DoubleSide}),
     new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('../assets/textures/hardwood.jpeg'), side: THREE.DoubleSide}),
     new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('../assets/textures/cube/Park3Med/pz.jpg'), side: THREE.DoubleSide}),
-    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('../assets/textures/cube/Park3Med/nz.jpg'), side: THREE.DoubleSide})
+    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('../assets/textures/hardwood.jpeg'), side: THREE.DoubleSide})
   ];
   containerTexture = new THREE.MeshFaceMaterial( conMaterials );
   container = new THREE.Mesh(containerGeo,containerTexture);
@@ -346,18 +346,8 @@ function init() {
   // floor
   geometry = new THREE.PlaneGeometry(550, 350, 0, 0);
   geometry.rotateX(-Math.PI / 2);
-  // floorTexture = new THREE.TextureLoader().load(
-  //   '../assets/textures/hardwood.jpeg');
-  // floorTexture.wrapS = floorTexture.wrapT = THREE.RepeatWrapping;
-  // floorTexture.repeat.set(20, 20);
-  // material = new THREE.MeshBasicMaterial({
-  //     map: floorTexture
-  //   }),
-  //   mesh = new THREE.Mesh(geometry, material);
-  // scene.add(mesh);
-
-
   
+
   var information = {};
   
 
@@ -988,7 +978,7 @@ function animate() {
     velocity.x -= velocity.x * 10.0 * delta;
     velocity.z -= velocity.z * 10.0 * delta;
 
-    velocity.y -= 9.8 * 100.0 * delta; // 100.0 = mass
+    velocity.y -= 9.8 * 150.0 * delta; // 100.0 = mass
 
     direction.z = Number(moveForward) - Number(moveBackward);
     direction.x = Number(moveLeft) - Number(moveRight);
@@ -1010,21 +1000,22 @@ function animate() {
       canJump = true;
 
     }
-    // if( controls.getObject().position.x > 210 ){
-    //   velocity.x = 0;
-    //   controls.getObject().position.x = 210;
-    // }else if( controls.getObject().position.x < -391 ){
-    //   velocity.x = 0;
-    //   controls.getObject().position.x = -391;
-    // }
+    
+    if( controls.getObject().position.x > 298 ){
+      velocity.x = 0;
+      controls.getObject().position.x = 298;
+    }else if( controls.getObject().position.x < -298 ){
+      velocity.x = 0;
+      controls.getObject().position.x = -298;
+    }
 
-    // if( controls.getObject( ).position.z < -187 ){
-    //   velocity.z = 0;
-    //   controls.getObject( ).position.z = -187;
-    // }else if( controls.getObject( ).position.z > 157 ){
-    //   velocity.z = 0;
-    //   controls.getObject( ).position.z = 157;
-    // }
+    if( controls.getObject( ).position.z < -190 ){
+      velocity.z = 0;
+      controls.getObject( ).position.z = -190;
+    }else if( controls.getObject( ).position.z > 214 ){
+      velocity.z = 0;
+      controls.getObject( ).position.z = 214;
+    }
     prevTime = time;
 
   if ( bloomPass ) {

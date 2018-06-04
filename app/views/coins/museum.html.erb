@@ -774,7 +774,7 @@ function init() {
 
  
 
-test = new THREE.CylinderGeometry(6, 6, 0.5,30,0.2);
+test = new THREE.CylinderGeometry(10, 10, 0.5,30,0.2);
 tempcoin = new THREE.Mesh(test, textures_array[0] );
 tempcoin.position.set( 20, 15, 0);
 tempcoin.name = "Coin"
@@ -965,8 +965,8 @@ function onMouseDown() {
           
           camera.add(coinPreview);
           camera.add(coinShaderPreview);
-          coinShaderPreview.position.set(0, 7, -30);
-          coinPreview.position.set(0, 7, -30);
+          coinShaderPreview.position.set(-10, 1, -30);
+          coinPreview.position.set(-10, 1, -30);
           previewCoinTexture1 = new THREE.TextureLoader().load(intersects[ 0 ].object.material.map.image.currentSrc);
           previewCoinTexture1.wrapS = previewCoinTexture1.wrapT = THREE.RepeatWrapping;
           previewCoinTexture1.magFilter = THREE.NearestFilter;

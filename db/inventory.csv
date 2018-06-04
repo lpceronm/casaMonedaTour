@@ -6987,13 +6987,9 @@ NEB0434,Pelicula,Pelicula,,5.000 pesos,,"Caja: 12 (Museo de Arte, Reserva Numism
 NEB0435,Pelicula,Pelicula,,5.000 pesos,,"Caja: 12 (Museo de Arte, Reserva Numismatica, Modulo: 2, Caja: 12)",Banco de la Republica,,1,1
 NEB0436,Vidrio,Cristal,,5.000 pesos,,"Caja: 12 (Museo de Arte, Reserva Numismatica, Modulo: 2, Caja: 12)",Banco de la Republica,,1,1
 NEB0437,Pelicula,Pelicula,,500 pesos,,"Caja: 15 (Museo de Arte, Reserva Numismatica, Modulo: 2, Caja: 15)",Banco de la Republica,,1,1
-NEB0438,"Pelicula_x000D_
-Pelicula",Pelicula,,500 pesos,,"Caja: 15 (Museo de Arte, Reserva Numismatica, Modulo: 2, Caja: 15)","Banco de la Republica_x000D_
-Banco de la Republica",,1,1
+NEB0438,"Pelicula",Pelicula,,500 pesos,,"Caja: 15 (Museo de Arte, Reserva Numismatica, Modulo: 2, Caja: 15)",Banco de la Republica,,1,1
 NEB0438,,Pelicula,,500 pesos,,"Caja: 15 (Museo de Arte, Reserva Numismatica, Modulo: 2, Caja: 15)",,,,
-NEB0439,"Pelicula_x000D_
-Pelicula",Pelicula,,500 pesos,,"Caja: 15 (Museo de Arte, Reserva Numismatica, Modulo: 2, Caja: 15)","Banco de la Republica_x000D_
-Banco de la Republica",,1,1
+NEB0439,"Pelicula",Pelicula,,500 pesos,,"Caja: 15 (Museo de Arte, Reserva Numismatica, Modulo: 2, Caja: 15)","Banco de la Republica",,1,1
 NEB0440,Pelicula,Pelicula,,200 pesos,,"Caja: 15 (Museo de Arte, Reserva Numismatica, Modulo: 2, Caja: 15)",Banco de la Republica,,1,1
 NEB0441,Pelicula,Pelicula,,200 pesos,,"Caja: 15 (Museo de Arte, Reserva Numismatica, Modulo: 2, Caja: 15)",Banco de la Republica,,1,1
 NEB0442,Pelicula,Pelicula,,200 pesos,,"Caja: 15 (Museo de Arte, Reserva Numismatica, Modulo: 2, Caja: 15)",Banco de la Republica,,1,1
@@ -12311,22 +12307,16 @@ NMO2890,ACERO/NIQUEL,PRUEBA,COLOMBIA,50 CENTAVOS,1969,"Folder: C-010/Pos: 010 (M
 NMO2891,ACERO/NIQUEL,PRUEBA,COLOMBIA,50 CENTAVOS,1969,"Folder: C-010/Pos: 011 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-010)",,,1,
 NMO2892,ACERO/NIQUEL,PRUEBA,COLOMBIA,1 PESO,1969,"Folder: C-010/Pos: 016 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-010)",,,1,
 NMO2893,ACERO/NIQUEL,PRUEBA,COLOMBIA,1 PESO,1969,"Folder: C-010/Pos: 017 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-010)",,,1,
-NMO2894,BRONCE,MONEDA,ROMA,AE,,"Folder: C-011/Pos: 001 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO2894,BRONCE,MONEDA,ROMA,AE,,"Folder: C-011/Pos: 001 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","(ILEGIBLE)",,1,
 NMO2895,BRONCE,MONEDA,ROMA,AE3,AD 351-5,"Folder: C-011/Pos: 002 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","CONSTANTIUS II, AD 337-361",,1,
 NMO2896,BRONCE,MONEDA,ROMA,FOLLIS,AD 310-313,"Folder: C-011/Pos: 003 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","CONSTANTINO I ""EL GRANDE"", AD 306-337",,1,
-NMO2897,BRONCE,MONEDA,ROMA,AE,,"Folder: C-011/Pos: 004 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO2897,BRONCE,MONEDA,ROMA,AE,,"Folder: C-011/Pos: 004 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","(ILEGIBLE)",,1,
 NMO2898,COBRE,MONEDA,MEXICO,2 REALES,1813,"Folder: C-011/Pos: 005 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)",OAXACA - SUD,,1,
-NMO2899,BRONCE,MONEDA,ROMA,AE,,"Folder: C-011/Pos: 006 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
-NMO2900,BRONCE,MONEDA,ROMA,AE,,"Folder: C-011/Pos: 007 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO2899,BRONCE,MONEDA,ROMA,AE,,"Folder: C-011/Pos: 006 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","(ILEGIBLE)",,1,
+NMO2900,BRONCE,MONEDA,ROMA,AE,,"Folder: C-011/Pos: 007 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","(ILEGIBLE)",,1,
 NMO2901,COBRE,MONEDA,MEXICO,2 REALES,1812,"Folder: C-011/Pos: 008 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)",OAXACA - SUD,,1,
-NMO2902,BRONCE,MONEDA,ROMA,AE,,"Folder: C-011/Pos: 009 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
-NMO2903,BRONCE,MONEDA,ROMA,AE,,"Folder: C-011/Pos: 010 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO2902,BRONCE,MONEDA,ROMA,AE,,"Folder: C-011/Pos: 009 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","(ILEGIBLE)",,1,
+NMO2903,BRONCE,MONEDA,ROMA,AE,,"Folder: C-011/Pos: 010 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","(ILEGIBLE)",,1,
 NMO2904,BRONCE,MONEDA,ROMA,DUPONDIO?,,"Folder: C-011/Pos: 011 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)",CESAR AUGUSTO 27 BC-AD 14,,1,
 NMO2905,BRONCE,MONEDA,ROMA,DUPONDIO?,,"Folder: C-011/Pos: 012 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)",CESAR AUGUSTO? 27 BC-AD 14,,1,
 NMO2906,LATON,MONEDA,MEXICO,CUARTILLA,1857,"Folder: C-011/Pos: 013 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)",ESTADO LIBRE DE GUANAXUATO,,1,
@@ -12353,14 +12343,11 @@ NMO2926,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-011/Pos: 033 (Museo de Arte, Re
 NMO2927,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-011/Pos: 034 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","MAXIMUS, HIJO DE MAXIMINUS I, CESAR AD 235-238",,1,
 NMO2928,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-011/Pos: 035 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","JULIA MAMAEA, hija de Julia Maesa y madre de Severus Alexander, AD 222-23",,1,
 NMO2929,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-011/Pos: 036 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","SEVERUS ALEXANDER, AD 222-235",,1,
-NMO2930,BRONCE,MONEDA,ROMA,DUPONDIO?,,"Folder: C-011/Pos: 037 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO2930,BRONCE,MONEDA,ROMA,DUPONDIO?,,"Folder: C-011/Pos: 037 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","(ILEGIBLE)",,1,
 NMO2931,BRONCE,MONEDA,ROMA,AS,,"Folder: C-011/Pos: 038 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)",DRUSUS,,1,
-NMO2932,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-011/Pos: 039 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO2932,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-011/Pos: 039 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","(ILEGIBLE)",,1,
 NMO2933,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-011/Pos: 040 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","PHILIPUS I, AD 244-249",,1,
-NMO2934,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-011/Pos: 041 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO2934,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-011/Pos: 041 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","(ILEGIBLE)",,1,
 NMO2935,BRONCE,MONEDA,ROMA,AS,,"Folder: C-011/Pos: 042 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-011)","GORDIANO III, AD 238-244",,1,
 NMO2936,COBRE,MONEDA,MEXICO,8 REALES,1812,"Folder: C-012/Pos: 001 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)",OAXACA - SUD,,1,
 NMO2937,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-012/Pos: 002 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","VESPASIANO, AD 69-79",,1,
@@ -12369,14 +12356,12 @@ NMO2939,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-012/Pos: 004 (Museo de Arte, Re
 NMO2940,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-012/Pos: 005 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","GALBA, AD 68-69",,1,
 NMO2941,BRONCE,MONEDA,ROMA,AS,,"Folder: C-012/Pos: 006 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)",DRUSUS (HIJO DE TIBERIO),,1,
 NMO2942,BRONCE,MONEDA,ROMA,SESTERCIO,125-128 AD,"Folder: C-012/Pos: 007 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","HADRIANO, AD 117-138",,1,
-NMO2943,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-012/Pos: 008 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO2943,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-012/Pos: 008 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","(ILEGIBLE)",,1,
 NMO2944,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-012/Pos: 009 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","VESPASIANO, AD 69-79",,1,
 NMO2945,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-012/Pos: 010 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","HADRIANO, AD 117-138",,1,
 NMO2946,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-012/Pos: 011 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","DOMICIANO, AD 81-96",,1,
 NMO2947,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-012/Pos: 012 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","LUCILLA, ESPOSA DE LUCIUS VERUS, AD 161-169",,1,
-NMO2948,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-012/Pos: 013 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO2948,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-012/Pos: 013 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","(ILEGIBLE)",,1,
 NMO2949,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-012/Pos: 014 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","HADRIANO, AD 117-138",,1,
 NMO2950,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-012/Pos: 015 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","ANTONINUS PIUS, AD 138-161",,1,
 NMO2951,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-012/Pos: 016 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","DOMICIANO, AD 81-96",,1,
@@ -12384,12 +12369,9 @@ NMO2952,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-012/Pos: 017 (Museo de Arte, Re
 NMO2953,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-012/Pos: 018 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","FAUSTINA LA JOVEN, ESPOSA DE MARCO AURELIO, AD 161-180",,1,
 NMO2954,COBRE,MONEDA,MEXICO,8 REALES,1814,"Folder: C-012/Pos: 019 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)",OAXACA - SUD,,1,
 NMO2955,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-012/Pos: 020 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","VOLUSIANO, AD 251-253",,1,
-NMO2956,BRONCE,MONEDA,ROMA,DUPONDIO?,,"Folder: C-012/Pos: 021 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
-NMO2957,BRONCE,MONEDA,ROMA,DUPONDIO?,,"Folder: C-012/Pos: 022 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
-NMO2958,BRONCE,MONEDA,ROMA,DUPONDIO?,,"Folder: C-012/Pos: 023 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO2956,BRONCE,MONEDA,ROMA,DUPONDIO?,,"Folder: C-012/Pos: 021 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","(ILEGIBLE)",,1,
+NMO2957,BRONCE,MONEDA,ROMA,DUPONDIO?,,"Folder: C-012/Pos: 022 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","(ILEGIBLE)",,1,
+NMO2958,BRONCE,MONEDA,ROMA,DUPONDIO?,,"Folder: C-012/Pos: 023 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","(ILEGIBLE)",,1,
 NMO2959,BRONCE,MONEDA,ROMA,DUPONDIO?,,"Folder: C-012/Pos: 024 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","HERENNIA ETRUSCILLA, ESPOSA DE TRAJANO DECIUS, AD 249-251",,1,
 NMO2960,NIQUEL,MONEDA,FRANCIA,5 CENTIMES,1923,"Folder: C-012/Pos: 025 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)",,,1,
 NMO2961,ALUMINIO-BRONCE,MONEDA,FRANCIA,50 CENTIMOS,1924,"Folder: C-012/Pos: 026 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)",CHAMBRES DES COMMERCE DE FRANCE,,1,
@@ -12404,8 +12386,7 @@ NMO2969,COBRE,MONEDA,ALEMANIA,1 PFENNING - 1/360 DE THALER,1857,"Folder: C-012/P
 NMO2970,COBRE,MONEDA,ALEMANIA,2 PFENNIGE,1872,"Folder: C-012/Pos: 037 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)",MECKLENBURG-SCHWERIN,,1,
 NMO2971,COBRE,MONEDA,ALEMANIA,1 REICHSPFENNIG,1925,"Folder: C-012/Pos: 038 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)",REPUBLICA DE WEIMAR,,1,
 NMO2972,COBRE,MONEDA,AUSTRIA,1/4 KREUZER,1816,"Folder: C-012/Pos: 039 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)",,,1,
-NMO2973,BRONCE,MONEDA,ROMA,FOLLIS?,,"Folder: C-012/Pos: 040 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO2973,BRONCE,MONEDA,ROMA,FOLLIS?,,"Folder: C-012/Pos: 040 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","(ILEGIBLE)",,1,
 NMO2974,BRONCE,MONEDA,ROMA,FOLLIS,,"Folder: C-012/Pos: 041 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","CONSTANTINO II, AD 337-340",,1,
 NMO2975,BRONCE,MONEDA,ROMA,FOLLIS,,"Folder: C-012/Pos: 042 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","CONSTANTINO I ""EL GRANDE"", AD 306-337",,1,
 NMO2976,BRONCE,MONEDA,ROMA,FOLLIS,,"Folder: C-012/Pos: 043 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-012)","CONSTANTINO I ""EL GRANDE"", AD 306-337",,1,
@@ -12473,56 +12454,39 @@ NMO3037,NIQUEL,MONEDA,ECUADOR,2 1/2 CENTAVOS,1928,"Folder: C-013/Pos: 057 (Museo
 NMO3038,BRONCE,MONEDA,MARRUECOS,2 MAZUNAS,AH1321 (1903),"Folder: C-013/Pos: 058 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-013)",,,1,
 NMO3039,ALUMINIO,MONEDA,MEXICO,1 CENTAVO,1914,"Folder: C-013/Pos: 059 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-013)",ESTADO DE DURANGO,,1,
 NMO3040,NIQUEL-BRONCE,MONEDA,LATVIA,1 SANTIMS,1922,"Folder: C-013/Pos: 060 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-013)",,,1,
-NMO3041,BRONCE,MONEDA,ROMA?,,,"Folder: C-013/Pos: 061 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-013)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
-NMO3042,BRONCE,MONEDA,ROMA?,,,"Folder: C-013/Pos: 062 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-013)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
-NMO3043,BRONCE,MONEDA,ROMA?,,,"Folder: C-013/Pos: 063 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-013)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO3041,BRONCE,MONEDA,ROMA?,,,"Folder: C-013/Pos: 061 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-013)","(ILEGIBLE)",,1,
+NMO3042,BRONCE,MONEDA,ROMA?,,,"Folder: C-013/Pos: 062 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-013)","(ILEGIBLE)",,1,
+NMO3043,BRONCE,MONEDA,ROMA?,,,"Folder: C-013/Pos: 063 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-013)","(ILEGIBLE)",,1,
 NMO3044,BRONCE,MONEDA,ROMA,AS,,"Folder: C-013/Pos: 064 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-013)","TIBERIUS, CIRCA 31-37 AD",,1,
 NMO3045,BRONCE,MONEDA,ROMA,SESTERCIO,,"Folder: C-013/Pos: 065 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-013)","MAXIMINUS I, AD 235-238",,1,
 NMO3046,BRONCE,MONEDA,ROMA,AS,,"Folder: C-013/Pos: 066 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-013)","NERON, AD 54-68",,1,
-NMO3047,BRONCE,MONEDA,ROMA,,,"Folder: C-013/Pos: 067 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-013)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO3047,BRONCE,MONEDA,ROMA,,,"Folder: C-013/Pos: 067 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-013)","(ILEGIBLE)",,1,
 NMO3048,BRONCE,MONEDA,ROMA,AS,,"Folder: C-013/Pos: 068 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-013)","VESPASIANO, AD 69-79",,1,
 NMO3049,BRONCE,MONEDA,ROMA,AS,,"Folder: C-013/Pos: 069 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-013)",AGRIPA,,1,
-NMO3050,BRONCE,MONEDA,ROMA,ASi,,"Folder: C-014/Pos: 001 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO3050,BRONCE,MONEDA,ROMA,ASi,,"Folder: C-014/Pos: 001 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)",,1,
 NMO3051,COBRE,MONEDA,MEXICO,1/4 DE REAL,1833,"Folder: C-014/Pos: 002 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)",,,1,
-NMO3052,BRONCE,MONEDA,ROMA,ASi,,"Folder: C-014/Pos: 003 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO3052,BRONCE,MONEDA,ROMA,ASi,,"Folder: C-014/Pos: 003 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)",,1,
 NMO3053,BRONCE,MONEDA,ROMA,DUPONDIO?,,"Folder: C-014/Pos: 004 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","DOMICIANO, AD 81-96",,1,
 NMO3054,BRONCE,MONEDA,ROMA,DUPONDIO?,,"Folder: C-014/Pos: 005 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","GORDIANO III, AD 238-244",,1,
-NMO3055,BRONCE,MONEDA,ROMA,ASi,,"Folder: C-014/Pos: 006 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO3055,BRONCE,MONEDA,ROMA,ASi,,"Folder: C-014/Pos: 006 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)",,1,
 NMO3056,BRONCE,MONEDA,ROMA,ASi,,"Folder: C-014/Pos: 007 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)",AUGUSTO?,,1,
-NMO3057,BRONCE,MONEDA,ROMA,ASi,,"Folder: C-014/Pos: 008 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
-NMO3058,BRONCE,MONEDA,ROMA,ASi,,"Folder: C-014/Pos: 009 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
-NMO3059,BRONCE,MONEDA,ROMA,,,"Folder: C-014/Pos: 010 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO3057,BRONCE,MONEDA,ROMA,ASi,,"Folder: C-014/Pos: 008 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)",,1,
+NMO3058,BRONCE,MONEDA,ROMA,ASi,,"Folder: C-014/Pos: 009 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)",,1,
+NMO3059,BRONCE,MONEDA,ROMA,,,"Folder: C-014/Pos: 010 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)",,1,
 NMO3060,BRONCE,MONEDA,ROMA,DUPONDIO?,,"Folder: C-014/Pos: 011 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","DOMICIANO, AD 81-96",,1,
-NMO3061,BRONCE,MONEDA,ROMA,ASi,,"Folder: C-014/Pos: 012 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
-NMO3062,BRONCE,MONEDA,ROMA?,,,"Folder: C-014/Pos: 013 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO3061,BRONCE,MONEDA,ROMA,ASi,,"Folder: C-014/Pos: 012 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)",,1,
+NMO3062,BRONCE,MONEDA,ROMA?,,,"Folder: C-014/Pos: 013 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)",,1,
 NMO3063,BRONCE,MONEDA,ROMA,DUPONDIO?,,"Folder: C-014/Pos: 014 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","MAXIMIANUS HERCULIUS, AD 285-ca. 310",,1,
-NMO3064,BRONCE,MONEDA,ROMA,ASi,,"Folder: C-014/Pos: 015 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO3064,BRONCE,MONEDA,ROMA,ASi,,"Folder: C-014/Pos: 015 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)",,1,
 NMO3065,BRONCE,MONEDA,ROMA,DOBLE CENTENIONALIS,,"Folder: C-014/Pos: 016 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","MAGNENTIUS, AD 350-353",,1,
 NMO3066,BRONCE,MONEDA,ROMA,ASi,,"Folder: C-014/Pos: 017 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","HADRIANO, AD 117-138",,1,
 NMO3067,BRONCE,MONEDA,ROMA,FOLLIS,,"Folder: C-014/Pos: 018 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","MAXENTIUS, AD 306-312",,1,
-NMO3068,BRONCE,MONEDA,ROMA?,,,"Folder: C-014/Pos: 019 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO3068,BRONCE,MONEDA,ROMA?,,,"Folder: C-014/Pos: 019 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)",,1,
 NMO3069,BRONCE,MONEDA,ROMA,FOLLIS,,"Folder: C-014/Pos: 020 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","MAXENTIUS, AD 306-312",,1,
-NMO3070,BRONCE,MONEDA,ROMA?,,,"Folder: C-014/Pos: 021 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO3070,BRONCE,MONEDA,ROMA?,,,"Folder: C-014/Pos: 021 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)",,1,
 NMO3071,BRONCE,MONEDA,ROMA,FOLLIS,,"Folder: C-014/Pos: 022 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","LICINIUS I, AD 308-324",,1,
-NMO3072,BRONCE,MONEDA,ROMA?,,,"Folder: C-014/Pos: 023 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
-NMO3073,BRONCE,MONEDA,ROMA,,,"Folder: C-014/Pos: 024 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO3072,BRONCE,MONEDA,ROMA?,,,"Folder: C-014/Pos: 023 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)",,1,
+NMO3073,BRONCE,MONEDA,ROMA,,,"Folder: C-014/Pos: 024 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)",,1,
 NMO3074,NIQUEL,MONEDA,ESTADOS UNIDOS,5 CENTS,1941,"Folder: C-014/Pos: 025 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)",,,1,
 NMO3075,PLATA,MONEDA,ESPAÑA,1 REAL,1778,"Folder: P-045/Pos: 035 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: P-045)",,,1,
 NMO3076,NIQUEL,MONEDA,ESTADOS UNIDOS,5 CENTS,1940,"Folder: C-014/Pos: 027 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)",,,1,
@@ -12542,14 +12506,11 @@ NMO3089,BRONCE,MONEDA,ROMA,DUPONDIO?,,"Folder: C-014/Pos: 040 (Museo de Arte, Re
 NMO3090,BRONCE,MONEDA,ROMA,DUPONDIO?,,"Folder: C-014/Pos: 041 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","PHILIP I, AD 244-249",,1,
 NMO3091,BRONCE,MONEDA,ROMA,AS,,"Folder: C-014/Pos: 042 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","AUGUSTUS, 27 BC-AD 14",,1,
 NMO3092,BRONCE,MONEDA,ROMA,FOLLIS,,"Folder: C-014/Pos: 043 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","GALERIUS, AD 293-311",,1,
-NMO3093,BRONCE,MONEDA,ROMA?,,,"Folder: C-014/Pos: 044 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO3093,BRONCE,MONEDA,ROMA?,,,"Folder: C-014/Pos: 044 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)",,1,
 NMO3094,BRONCE,MONEDA,ROMA,DUPONDIO,,"Folder: C-014/Pos: 045 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","NERVA, AD 96-98",,1,
-NMO3095,BRONCE,MONEDA,ROMA,ASi,,"Folder: C-014/Pos: 046 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO3095,BRONCE,MONEDA,ROMA,ASi,,"Folder: C-014/Pos: 046 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)",,1,
 NMO3096,COBRE,MONEDA,MEXICO,1/4 DE REAL,1833,"Folder: C-014/Pos: 047 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)",,,1,
-NMO3097,BRONCE,MONEDA,ROMA,ASi,,"Folder: C-014/Pos: 048 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO3097,BRONCE,MONEDA,ROMA,ASi,,"Folder: C-014/Pos: 048 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)","(ILEGIBLE)",,1,
 NMO3098,COBRE,MONEDA,ESPAÑA,8 MARAVEDIES,1604,"Folder: C-014/Pos: 054 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)",,,1,
 NMO3099,COBRE,MONEDA,ESPAÑA,2 CENTIMOS,1904,"Folder: C-014/Pos: 055 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)",,,1,
 NMO3100,NIQUEL,MONEDA,MEXICO,5 CENTAVOS,1882,"Folder: C-014/Pos: 056 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-014)",,,1,
@@ -12617,8 +12578,7 @@ NMO3161,COBRE,Medalla conmemorativa,COLOMBIA,,1879,"Folder: C-015/Pos: 045 (Muse
 NMO3162,Cobre / Acuñacion,Medalla conmemorativa,COLOMBIA,,1880,"Folder: C-015/Pos: 046 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-015)",DEPARTAMENTO NACIONAL DE AGRICULTURA,,1,
 NMO3163,COBRE,Medalla conmemorativa,COLOMBIA,,1926,"Folder: C-015/Pos: 047 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-015)",ADMINISTRACION OSPINA,,1,
 NMO3164,LATON,MEDALLA,COLOMBIA,,1978,"Folder: C-015/Pos: 048 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-015)",CAMPAÑA ALFONSO LOPEZ MICHELSEN,,1,
-NMO3165,BRONCE,MONEDA,ROMA,,,"Folder: C-016/Pos: 013 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO3165,BRONCE,MONEDA,ROMA,,,"Folder: C-016/Pos: 013 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)","(ILEGIBLE)",,1,
 NMO3166,BRONCE,MONEDA,ROMA,AE3,,"Folder: C-016/Pos: 014 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)","CONSTANTINO I ""EL GRANDE"", AD 306-337",,1,
 NMO3167,VELLON,MONEDA,ALEMANIA,3 PFENNIG,167-,"Folder: C-016/Pos: 015 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)",ESTADOS ALEMANES,,1,
 NMO3168,COBRE,MONEDA,ITALIA,1 CENTESIMO,1900,"Folder: C-016/Pos: 016 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)",,,1,
@@ -12636,14 +12596,12 @@ NMO3179,NIQUEL,MONEDA,MEXICO,1 CENTAVO,1883,"Folder: C-016/Pos: 027 (Museo de Ar
 NMO3180,BRONCE,MONEDA,ALEMANIA,1 REICHSPFENNIG,1924,"Folder: C-016/Pos: 029 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)",REPUBLICA DE WEIMAR,,1,
 NMO3181,COBRE,MONEDA,NUEVA GUINEA,1 PFENNIG,1894,"Folder: C-016/Pos: 030 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)",NEU-GUINEA COMPAGNIE,,1,
 NMO3182,BRONCE,MONEDA,ROMA,RADIATE,,"Folder: C-016/Pos: 031 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)","DIOCLECIANO, AD 284-305",,1,
-NMO3183,BRONCE,MONEDA,ROMA,FOLLIS?,,"Folder: C-016/Pos: 032 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO3183,BRONCE,MONEDA,ROMA,FOLLIS?,,"Folder: C-016/Pos: 032 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)","(ILEGIBLE)",,1,
 NMO3184,NIQUEL,MONEDA,ECUADOR,1 CENTAVO,1909,"Folder: C-016/Pos: 033 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)",,,1,
 NMO3185,VELLON,MONEDA,ALEMANIA,1 SILBER GROSCHEN,1869,"Folder: C-016/Pos: 034 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)",PRUSIA,,1,
 NMO3186,BRONCE,MONEDA,ROMA,AE4,,"Folder: C-016/Pos: 035 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)","CONSTANTINO I ""EL GRANDE"", AD 306-337",,1,
 NMO3187,BRONCE,MONEDA,ROMA,ANTONINIANO,,"Folder: C-016/Pos: 036 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)","TETRICUS I, AD 271-274",,1,
-NMO3188,BRONCE,MONEDA,ROMA,,,"Folder: C-016/Pos: 037 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO3188,BRONCE,MONEDA,ROMA,,,"Folder: C-016/Pos: 037 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)","(ILEGIBLE)",,1,
 NMO3189,COBRE,MONEDA,AUSTRIA,1/4 KREUZER,1851,"Folder: C-016/Pos: 038 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)",,,1,
 NMO3190,BRONCE,MONEDA,ROMA,AE3,,"Folder: C-016/Pos: 039 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)","CONSTANTINO II, AD 337-340",,1,
 NMO3191,BRONCE,MONEDA,ROMA,AE3,,"Folder: C-016/Pos: 040 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)","CONSTANTINO I ""EL GRANDE"", AD 306-337",,1,
@@ -12677,8 +12635,7 @@ NMO3218,BRONCE,MONEDA,COSTA RICA,10 CENTESIMOS,1929,"Folder: C-016/Pos: 067 (Mus
 NMO3219,BRONCE,MONEDA,ROMA,AE3,,"Folder: C-016/Pos: 068 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)","HELENA, PRIMERA ESPOSA DE CONSTANCIO I CHLORUS",,1,
 NMO3220,COBRE,MONEDA,ALEMANIA,1 PFENNING,1864,"Folder: C-016/Pos: 069 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)",BAVARIA,,1,
 NMO3221,BRONCE,MONEDA,ROMA,AE3,,"Folder: C-016/Pos: 071 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)","CONSTANTINO I ""EL GRANDE"", AD 306-337",,1,
-NMO3222,BRONCE,MONEDA,ROMA,,,"Folder: C-016/Pos: 072 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)","(ILEGIBLE)_x000D_
-(ILEGIBLE)",,1,
+NMO3222,BRONCE,MONEDA,ROMA,,,"Folder: C-016/Pos: 072 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)","(ILEGIBLE)",,1,
 NMO3223,BRONCE,MONEDA,ROMA,AE3,,"Folder: C-016/Pos: 073 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)","CRISPUS, CESAR AD 317-326",,1,
 NMO3224,COBRE,MONEDA,ALEMANIA,1 PFENNING,1863,"Folder: C-016/Pos: 074 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)",SAJONIA,,1,
 NMO3225,BRONCE,MONEDA,ROMA,AE3,,"Folder: C-016/Pos: 075 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-016)","CONSTANTINO I ""EL GRANDE"", AD 306-337",,1,
@@ -15132,8 +15089,7 @@ NMO5672,PLATA,Medalla conmemorativa,COLOMBIA,,1968,"Folder: P-035/Pos: 020 (Muse
 NMO5673,PLATA,Medalla conmemorativa,COLOMBIA,,1960,"Folder: P-035/Pos: 025 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: P-035)",SOCIEDAD DE MEJORAS Y ORNATO,,1,
 NMO5674,COBRE-NIQUEL-ALUMINIO,MONEDA,Colombia,20 PESOS,2004,"Folder: C-044/Pos: 113 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-044)",,,,1
 NMO5675,COBRE-NIQUEL-ALUMINIO,MONEDA,Colombia,20 PESOS,2004,"Folder: C-044/Pos: 114 (Museo de Arte, Reserva Numismatica, Modulo: 07, Folder: C-044)",,,,1
-nmo5676,"COBRE-NIQUEL-ALUMINIO_x000D_
-COBRE",MONEDA,Colombia,2 REALES,804,"Gaveta: 02/Estuche: 089 (Museo de Arte, Reserva Numismatica, Modulo: 05, Gaveta: 02)",,,,1
+nmo5676,"COBRE-NIQUEL-ALUMINIO-COBRE",MONEDA,Colombia,2 REALES,804,"Gaveta: 02/Estuche: 089 (Museo de Arte, Reserva Numismatica, Modulo: 05, Gaveta: 02)",,,,1
 NMO5677,PLATA,MONEDA,Colombia,2 reales,184,"Gaveta: 02/Estuche: 090 (Museo de Arte, Reserva Numismatica, Modulo: 05, Gaveta: 02)",,,,1
 NMO5678,COBRE,MONEDA,Colombia,1/2 real,1813,"Gaveta: 02/Estuche: 091 (Museo de Arte, Reserva Numismatica, Modulo: 05, Gaveta: 02)",,,,1
 NMO5679,PLATA,Medalla artistica,Colombia,,1977,"Gaveta: 04/Estuche: 096 (Museo de Arte, Reserva Numismatica, Modulo: 05, Gaveta: 04)",,,1,1
@@ -16843,14 +16799,10 @@ NMO7382,"Corona (Alpaca Blanca) Cu 65%, Ni 12%, Zn 23%",Moneda,Colombia,500 PESO
 NMO7383,"Corona (Alpaca Blanca) Cu 65%, Ni 12%, Zn 23%",Moneda,Colombia,500 PESOS,2015,"Folder: C-046/Pos: 002 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
 NMO7384,"Corona (Alpaca Blanca) Cu 65%, Ni 12%, Zn 23%",Moneda,Colombia,500 PESOS,2015,"Folder: C-046/Pos: 003 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
 NMO7385,"Corona (Alpaca Blanca) Cu 65%, Ni 12%, Zn 23%",Moneda,Colombia,500 PESOS,2015,"Folder: C-046/Pos: 004 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
-NMO7386,"Aleacion en acero enchapado en niquel_x000D_
-Alpaca",Moneda,Colombia,50 PESOS,2015,"Folder: C-046/Pos: 005 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
-NMO7387,"Aleacion en acero enchapado en niquel_x000D_
-Alpaca",Moneda,Colombia,50 PESOS,2015,"Folder: C-046/Pos: 006 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
-NMO7388,"Aleacion en acero enchapado en niquel_x000D_
-Alpaca",Moneda,Colombia,50 PESOS,2015,"Folder: C-046/Pos: 007 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
-NMO7389,"Aleacion en acero enchapado en niquel_x000D_
-Alpaca",Moneda,Colombia,50 PESOS,2015,"Folder: C-046/Pos: 008 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
+NMO7386,"Aleacion en acero enchapado en niquel Alpaca",Moneda,Colombia,50 PESOS,2015,"Folder: C-046/Pos: 005 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
+NMO7387,"Aleacion en acero enchapado en niquel Alpaca",Moneda,Colombia,50 PESOS,2015,"Folder: C-046/Pos: 006 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
+NMO7388,"Aleacion en acero enchapado en niquel Alpaca",Moneda,Colombia,50 PESOS,2015,"Folder: C-046/Pos: 007 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
+NMO7389,"Aleacion en acero enchapado en niquel Alpaca",Moneda,Colombia,50 PESOS,2015,"Folder: C-046/Pos: 008 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
 NMO7390,Acero con recubrimiento en laton.,Moneda,Colombia,100 PESOS,2015,"Folder: C-046/Pos: 009 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
 NMO7391,Acero con recubrimiento en laton.,Moneda,Colombia,100 PESOS,2015,"Folder: C-046/Pos: 010 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
 NMO7392,Acero con recubrimiento en laton.,Moneda,Colombia,100 PESOS,2015,"Folder: C-046/Pos: 011 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
@@ -17031,22 +16983,14 @@ NMO7566,PLATA,MEDALLA,COLOMBIA,,1923-1948,"Caja: 51/Pos: DP-102 (Museo de Arte, 
 NMO7567,PLATA,MEDALLA,COLOMBIA,,1961,"Caja: 51/Pos: DP-103 (Museo de Arte, Reserva Numismatica, Modulo: 01, Caja: 51)",,,1,
 NMO7568,PLATA,MEDALLA,COLOMBIA,,1819-1969,"Caja: 51/Pos: DP-104 (Museo de Arte, Reserva Numismatica, Modulo: 01, Caja: 51)",,,1,
 NMO7569,PLATA,MEDALLA,COLOMBIA,,1968,"Caja: 51/Pos: DP-105 (Museo de Arte, Reserva Numismatica, Modulo: 01, Caja: 51)",,,1,
-NMO7570,"Aleacion en acero enchapado en niquel_x000D_
-Alpaca",Moneda,Colombia,50 PESOS,2015,"Folder: C-046/Pos: 021 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
-NMO7571,"Aleacion en acero enchapado en niquel_x000D_
-Alpaca",Moneda,Colombia,50 PESOS,2015,"Folder: C-046/Pos: 022 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
-NMO7572,"Aleacion en acero enchapado en niquel_x000D_
-Alpaca",Moneda,Colombia,50 PESOS,2015,"Folder: C-046/Pos: 023 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
-NMO7573,"Aleacion en acero enchapado en niquel_x000D_
-Alpaca",Moneda,Colombia,50 PESOS,2015,"Folder: C-046/Pos: 024 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
-NMO7574,"Aleacion en acero enchapado en niquel_x000D_
-Alpaca",Moneda,Colombia,50 PESOS,2016,"Folder: C-046/Pos: 025 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
-NMO7575,"Aleacion en acero enchapado en niquel_x000D_
-Alpaca",Moneda,Colombia,50 PESOS,2016,"Folder: C-046/Pos: 026 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
-NMO7576,"Aleacion en acero enchapado en niquel_x000D_
-Alpaca",Moneda,Colombia,50 PESOS,2016,"Folder: C-046/Pos: 027 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
-NMO7577,"Aleacion en acero enchapado en niquel_x000D_
-Alpaca",Moneda,Colombia,50 PESOS,2016,"Folder: C-046/Pos: 028 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
+NMO7570,"Aleacion en acero enchapado en niquel Alpaca",Moneda,Colombia,50 PESOS,2015,"Folder: C-046/Pos: 021 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
+NMO7571,"Aleacion en acero enchapado en niquel Alpaca",Moneda,Colombia,50 PESOS,2015,"Folder: C-046/Pos: 022 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
+NMO7572,"Aleacion en acero enchapado en niquel Alpaca",Moneda,Colombia,50 PESOS,2015,"Folder: C-046/Pos: 023 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
+NMO7573,"Aleacion en acero enchapado en niquel Alpaca",Moneda,Colombia,50 PESOS,2015,"Folder: C-046/Pos: 024 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
+NMO7574,"Aleacion en acero enchapado en niquel Alpaca",Moneda,Colombia,50 PESOS,2016,"Folder: C-046/Pos: 025 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
+NMO7575,"Aleacion en acero enchapado en niquel Alpaca",Moneda,Colombia,50 PESOS,2016,"Folder: C-046/Pos: 026 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
+NMO7576,"Aleacion en acero enchapado en niquel Alpaca",Moneda,Colombia,50 PESOS,2016,"Folder: C-046/Pos: 027 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
+NMO7577,"Aleacion en acero enchapado en niquel Alpaca",Moneda,Colombia,50 PESOS,2016,"Folder: C-046/Pos: 028 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
 NMO7578,Acero con recubrimiento en laton.,Moneda,Colombia,100 PESOS,2016,"Folder: C-046/Pos: 029 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
 NMO7579,Acero con recubrimiento en laton.,Moneda,Colombia,100 PESOS,2016,"Folder: C-046/Pos: 030 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1
 NMO7580,Acero con recubrimiento en laton.,Moneda,Colombia,100 PESOS,2016,"Folder: C-046/Pos: 031 (Museo de Arte, Reserva numismatica, Modulo: 07, Folder: C-046)",,,1,1

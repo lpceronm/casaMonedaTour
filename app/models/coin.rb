@@ -22,4 +22,9 @@
 class Coin < ApplicationRecord
   mount_uploader :image, ImageUploader
 
+  def self.random_coins
+    select("id","name","num_record","material","country","denomination").order("RANDOM()").first(276)
+  end
+
 end
+

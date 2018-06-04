@@ -1,4 +1,3 @@
-
 # <h1  style="text-align: center;">Museo Virtual Casa de Moneda<h1>
 
 ## Integrantes
@@ -10,45 +9,60 @@
 | Sebastian David Moreno Bernal    | sdmorenob       |
 | Cristian Camilo Orjuela Velandia | CristianOrjuela |
 
-
 ## Descripción
 
 <p style="text-align: justify;">
-El Museo Casa de Moneda de Bogotá fue el lugar donde se fabricaron las primeras monedas de oro en América Latina en el año de 1621. Allí se guarda la colección numística del Banco de La República de Colombia con más de 1700 piezas especialmente monetarias, que han circulado por el territorio Colombiano desde comienzos del siglo XVII.
-El Museo Virtual nace con el propósito de brindar la oportunidad a los interesados de realizar un tour por las salas de exposición diseñadas. Allí se encontrarán los ejemplares (actualmente de prueba) y la información relacionada, tal como se haría en el Museo. Adicionalmente, el usuario podrá diseñar su recorrido mediante el uso de filtros de información preferententes.
+El Museo Casa de Moneda de Bogotá fue el lugar donde se fabricaron las primeras monedas de oro en América Latina en el año de 1621. Allí se guarda la colección numística del Banco de La República de Colombia con más de 1700 piezas especialmente monetarias, que han circulado por el territorio Colombiano desde comienzos del siglo XVII.  
+El Museo Virtual nace con el propósito de brindar la oportunidad a los interesados de realizar un tour por las salas de exposición diseñadas. Allí se encontrarán los ejemplares (actualmente de prueba) y la información relacionada, tal como se haría en el Museo. Adicionalmente, el usuario podrá programar su recorrido mediante el uso de filtros de información preferententes y hacer uso de un servicio para compartir información acerca de las piezas de manera anónima.
 </p>
 
 ## Objetivos
 
-1. Diseñar un Museo Virtual Casa de Moneda que permita realizar un tour por el escenario
 
-### References
+1. <p style="text-align: justify;">Diseñar un Museo Virtual que mediante un navegador web permita realiazar un tour por un escenario asemejado al Museo Casa de Moneda de Bogotá de manera interactiva.</p>
+2. <p style="text-align: justify;">Implementar los conocimientos adquiridos durante el curso de Computación Visual de la Universidad Nacional de Colombia en la creación de un Museo Virtual.</p>
+3. <p style="text-align: justify;">Implementar filtros de información para facilitar al usuario el diseño del recorrido personalizado.</p>
 
-1. [Reynolds, C. W. Flocks, Herds and Schools: A Distributed Behavioral Model.87](http://www.cs.toronto.edu/~dt/siggraph97-course/cwr87/).
-2. Check also this [nice presentation](https://pdfs.semanticscholar.org/73b1/5c60672971c44ef6304a39af19dc963cd0af.pdf) about the paper:
-3. There are many online sources, google for more...
+## Descripción del Desarrollo
+
+<p style="text-align: justify;">
+El proyecto fue realizado empleando el Framework Ruby on Rails, el cual se encuentra configurado en un sistema de contenedores llamado Docker. A niver gráfico se realizó la implementación con ERB que es un archivo compilado del Framework a HTML y JavaScript con la ayuda de la librería Three.js
+</p>
 
 ## Discusión
 
-###  Representaciones estudiadas:
+Mediante el uso de la librería anteriormente mencionada, se logró crear una aplicación que permitiera al usuario realizar un tour por un Museo Virtual, la cual se llevó a cabo gracias a la aplicación de los siguientes conceptos.
 
-#### Representaciones
+### Interacción:
 
- Durante la valoración de diferentes alternativas para realizar la representación de las mallas poligonales se consideraron algunos factores importantes tal como la complejidad de las visualizaciones y su implementación en la práctica. Por esta razón, y para observar de mejor manera la aplicación de la malla, se diseñó un prototipo de Boid con una gran cantidad de vértices y caras con el fin de especificar el modelo y visualizar en mayor medida su representación.
+#### Navegación
 
- Este prototipo fue diseñado en el programa de Blender con el propósito de poder realizar configuraciones particulares y generar una representación más real de lo que es un *Boid*. Inicialmente, se realizó una estructura que tenía como base una estructura a partir de cubos, como se expone en la siguiente imagen:
+<p style="text-align: justify;">
+El usuario puede recorrer el escenario en primera persona de forma libre y autónoma a través de la galería seleccionada mediante el uso de filtros de información.
+</p>
 
-  ![alt](./imagenes/boidcubes.PNG)
+#### Selección.
 
- Y que cuando cuenta con textura, se logra visualizar de la siguiente manera.
+<p style="text-align: justify;">
+El usuario puede desplazarse en cualquiera de las direcciones del escenario mediante el uso de las flechas. Adicionalmente, puede rotar el ángulo de visión usando el mouse y realizar un desplazamiento vertical oprimiento la tecla espacio.
+</p>
 
- ![alt](./imagenes/boidcubestexture.PNG)
+#### Frames
 
- Pero luego, se realizó una modificación en la estructura para realizar la presentación EdgeVertex y VertexVertex, migrando los diseños de cubos a tetraedros.
 
-  ![alt](./imagenes/boidtetrahedron.PNG)
 
- De esta manera, se logró incluir dentro de la representación de mallas poligonales una versión del Boid de mayor complejidad, contando con 120 vértices y 234 caras (faces). Asimismo, a través de cálculos y variaciones se lograron identificar cada uno de los vértices y caras de la malla para realizar las posteriores implementaciones.
+
+![alt](./imagenes/boidcubes.PNG)
+
+Y que cuando cuenta con textura, se logra visualizar de la siguiente manera.
+
+![alt](./imagenes/boidcubestexture.PNG)
+
+Pero luego, se realizó una modificación en la estructura para realizar la presentación EdgeVertex y VertexVertex, migrando los diseños de cubos a tetraedros.
+
+![alt](./imagenes/boidtetrahedron.PNG)
+
+De esta manera, se logró incluir dentro de la representación de mallas poligonales una versión del Boid de mayor complejidad, contando con 120 vértices y 234 caras (faces). Asimismo, a través de cálculos y variaciones se lograron identificar cada uno de los vértices y caras de la malla para realizar las posteriores implementaciones.
 
  #### Face-Vertex
 
@@ -138,6 +152,14 @@ con mejores recursos.
 
 - Además, es bastante curioso que algunas nociones en la teoría deban representar una parametrización determinada y en la práctica estos conceptos no terminan
 de aplicarse de la manera más seria, como se observa en la representación del modo inmediato y el modo retenido.
+
+
+
+### References
+
+1. [Reynolds, C. W. Flocks, Herds and Schools: A Distributed Behavioral Model.87](http://www.cs.toronto.edu/~dt/siggraph97-course/cwr87/).
+2. Check also this [nice presentation](https://pdfs.semanticscholar.org/73b1/5c60672971c44ef6304a39af19dc963cd0af.pdf) about the paper:
+3. There are many online sources, google for more...
 
 
 ## Referencias

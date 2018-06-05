@@ -331,12 +331,15 @@ function init() {
   
   containerGeo = new THREE.CubeGeometry(600, 50, 430);
   var conMaterials = [ 
-    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('../assets/textures/cube/Park3Med/px.jpg'), side: THREE.DoubleSide}),
-    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('../assets/textures/cube/Park3Med/nx.jpg'), side: THREE.DoubleSide}),
+    //Lado derecho
+    new THREE.MeshBasicMaterial( {color: 0x1c1300, side: THREE.DoubleSide}),
+    new THREE.MeshBasicMaterial({ color: 0x1c1300, side: THREE.DoubleSide}),
+    //Techo
     new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('../assets/textures/ceiling.jpg'), side: THREE.DoubleSide}),
+    //Piso
     new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('../assets/textures/hardwood.jpeg'), side: THREE.DoubleSide}),
-    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('../assets/textures/cube/Park3Med/pz.jpg'), side: THREE.DoubleSide}),
-    new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('../assets/textures/hardwood.jpeg'), side: THREE.DoubleSide})
+    new THREE.MeshBasicMaterial({ color: 0x1c1300 , side: THREE.DoubleSide}),
+    new THREE.MeshBasicMaterial({ color: 0x1c1300, side: THREE.DoubleSide})
   ];
   containerTexture = new THREE.MeshFaceMaterial( conMaterials );
   container = new THREE.Mesh(containerGeo,containerTexture);

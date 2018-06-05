@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @coin.name %>
+</p>
+
+<p>
+  <strong>Num record:</strong>
+  <%= @coin.num_record %>
+</p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @coin.material %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @coin.country %>
+</p>
+
+<p>
+  <strong>Denomination:</strong>
+  <%= @coin.denomination %>
+</p>
+
+<p>
+  <strong>Batch:</strong>
+  <%= @coin.batch %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @coin.location %>
+</p>
+
+<p>
+  <strong>Issuer:</strong>
+  <%= @coin.issuer %>
+</p>
+
+<p>
+  <strong>Serial number:</strong>
+  <%= @coin.serial_number %>
+</p>
+
+<p>
+  <strong>Part number:</strong>
+  <%= @coin.part_number %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @coin.quantity %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @coin.image %>
+</p>
+
+<%= link_to 'Edit', edit_coin_path(@coin) %> |
+<%= link_to 'Back', coins_path %>

@@ -16,7 +16,9 @@ El Museo Casa de Moneda de Bogotá fue el lugar donde se fabricaron las primeras
 El Museo Virtual nace con el propósito de brindar la oportunidad a los interesados de realizar un tour por las salas de exposición diseñadas. Allí se encontrarán los ejemplares (actualmente de prueba) y la información relacionada, tal como se haría en el Museo. Adicionalmente, el usuario podrá hacer uso de un servicio para aportar información sobre las piezas de manera anónima.
 </p>
 
-![](Demo.mp4)
+<video controls="controls">
+  <source type="video/mp4" src="Demo.mp4"></source>
+</video>
 
 ## Objetivos
 

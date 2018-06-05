@@ -11,7 +11,7 @@ class CoinsController < ApplicationController
       @test_info << folder_path + name
     end
 
-    @coins_all = Coin.all
+    @coins_all = Coin.random_coins
 
     
   end

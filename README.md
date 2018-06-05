@@ -15,10 +15,9 @@ Ingrese y visualice el [Museo Virtual Casa de Moneda](http://35.231.78.88:3000/c
 
 ## Descripción
 
-<p style="text-align: justify;">
 El Museo Casa de Moneda de Bogotá fue el lugar donde se fabricaron las primeras monedas de oro en América Latina en el año de 1621. Allí se guarda la colección numística del Banco de La República de Colombia con más de 1700 piezas especialmente monetarias, que han circulado por el territorio Colombiano desde comienzos del siglo XVII.  
 El [Museo Virtual](http://35.231.78.88:3000/coins/museum) nace con el propósito de brindar la oportunidad a los interesados de realizar un tour por las salas de exposición diseñadas. Allí se encontrarán los ejemplares (actualmente de prueba) y la información relacionada, tal como se haría en el Museo pero de manera virtual. Adicionalmente, el usuario podrá hacer uso de un servicio para cargar información sobre las piezas de manera anónima.
-</p>
+
 
 Para disfrutar visualizar el museo virtual, haga clic [aquí](http://35.231.78.88:3000/coins/museum).
 
@@ -91,11 +90,6 @@ El usuario puede seleccionar su ambiente ideal para su tour virtual. Para ello s
 - SunLight: Varía la cantidad de luz solar presente en el museo durante el recorrido.
 - middleGrey: Varía la escala de grises de la escena.
 - maxLuminance: Modifica la luminancia presente en el Museo, variando principalmente el brillo de los objetos.
-
----
-![alt](./imagenes/edgevertex.jpg)
-![alt text](./imagenes/gif1.gif)
----
 
 ## Trabajo Futuro
 

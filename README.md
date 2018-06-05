@@ -28,10 +28,10 @@ El Museo Virtual nace con el propósito de brindar la oportunidad a los interesa
 
 El proyecto fue realizado empleando el Framework Ruby on Rails, el cual se encuentra configurado en un sistema de contenedores llamado Docker. A nivel gráfico se realizó la implementación con ERB que es un archivo compilado del Framework a HTML y JavaScript con la ayuda de la librería Three.js.  
 Para la creación del escenario se hizo uso de la herramienta [Claro.io](https://clara.io/) que permite la animación y el renderizado de modelos 3D. El modelo resultante fue [coinMuseum](https://clara.io/view/30ad21c2-23fe-497c-92cf-6745f9c7a914/), el cual se describe mediante un archivo de tipo JSON y que gracias a una de las funcionales de la librería se puede exportar como modelo y trabajar en él. Adicionalmente para la implementación se usó [este](https://blog.cogapp.com/how-to-create-a-virtual-3d-gallery-using-iiif-and-three-js-ad6766e45d3f/) artículo.  
-Basados en un ejemplo de [controls/pointerlock](https://threejs.org/examples/?q=pointer#misc_controls_pointerlock/) se desarrolló el proyecto en el ámbito interactivo para el movimiento del observador y para la selección y visualización de la moneda fue necesario implementar el algoritmo [Raycaster](https://threejs.org/docs/index.html#api/core/Raycaster). Estos conceptos serán ampliados en la sección [Discusión](<a href="#discusion"></a>).
+Basados en un ejemplo de [controls/pointerlock](https://threejs.org/examples/?q=pointer#misc_controls_pointerlock/) se desarrolló el proyecto en el ámbito interactivo para el movimiento del observador y para la selección y visualización de la moneda fue necesario implementar el algoritmo [Raycaster](https://threejs.org/docs/index.html#api/core/Raycaster). Estos conceptos serán ampliados en la sección [Discusión](##Discusión).
 
 
-## <div id="discusion"></div>Discusión
+## Discusión
 
 <p style="text-align: justify;">
 Mediante el uso de la librería anteriormente mencionada, se logró crear una aplicación que permitiera al usuario realizar un tour por un Museo Virtual, la cual se llevó a cabo gracias a la aplicación de los siguientes conceptos.

@@ -28,7 +28,7 @@ El Museo Virtual nace con el propósito de brindar la oportunidad a los interesa
 
 <p style="text-align: justify;">
 El proyecto fue realizado empleando el Framework Ruby on Rails, el cual se encuentra configurado en un sistema de contenedores llamado Docker. A nivel gráfico se realizó la implementación con ERB que es un archivo compilado del Framework a HTML y JavaScript con la ayuda de la librería Three.js.  
-Para la creación del escenario se hizo uso de la herramienta [Claro.io](https://clara.io/) que permite la animación y el renderizado de modelos 3D. El modelo resultante fue [coinMuseum](https://clara.io/view/30ad21c2-23fe-497c-92cf-6745f9c7a914), el cual se describe mediante un archivo de tipo JSON y que gracias a una de las funcionales de la librería se puede exportar como modelo y trabajar en él. Adicionalmente para la implementación se usó [este]((https://blog.cogapp.com/how-to-create-a-virtual-3d-gallery-using-iiif-and-three-js-ad6766e45d3f) artículo.  
+Para la creación del escenario se hizo uso de la herramienta  [Claro.io](https://clara.io/) que permite la animación y el renderizado de modelos 3D. El modelo resultante fue [coinMuseum](https://clara.io/view/30ad21c2-23fe-497c-92cf-6745f9c7a914), el cual se describe mediante un archivo de tipo JSON y que gracias a una de las funcionales de la librería se puede exportar como modelo y trabajar en él. Adicionalmente para la implementación se usó [este]((https://blog.cogapp.com/how-to-create-a-virtual-3d-gallery-using-iiif-and-three-js-ad6766e45d3f) artículo.  
 Basados en un ejemplo de [controls/pointerlock](https://threejs.org/examples/?q=pointer#misc_controls_pointerlock) se desarrolló el proyecto en el ámbito interactivo para el movimiento del observador y para la selección y visualización de la moneda fue necesario implementar el algoritmo [Raycaster](https://threejs.org/docs/index.html#api/core/Raycaster). Estos conceptos serán ampliados en la sección [Discusión](<a href="#discusion"></a>).
 </p>
 
@@ -65,8 +65,30 @@ Las monedas y los Muros.
 - <p style="text-align: justify;"> El mouse: El movimiento de este permite rotar el ángulo de visión de la camara, de forma horizontal y vertical, y el click izquierdo permite seleccionar el nodo (Moneda) de la cual se desea poseer información.</p>
 
 ### Shaders
+<p style="text-align: justify;">
+Para el proyecto, existen tres situaciones principales en la cual se hace uso de shaders. El primero es para identificar la moneda que fue seleccionada y el segundo para poder abstraer el borde de la moneda y el tercero para ambientar el Museo.
+</p>
 
+#### Identificar la moneda
+<p style="text-align: justify;">
+Dado que el Museo posee en ambos costados de los muros ubicados objetos, se realiza la diferenciación del objeto seleccionado mediante el uso de filtros de sombra, el cual varía dependiendo la distancia del observador a dicho objeto. De esta forma es posible realizar la selección de la moneda sin interferencia entre objetos.
+</p>
 
+#### Identificar los bordes de la moneda
+<p style="text-align: justify;">
+Una vez se desea detallar la información de una moneda mediante el click izquierdo del mouse, se aplica un shader de tal forma que se reconozca el borde de la moneda y así, se poder visualizar con más detalle la imagen. Sin embargo, debido a la irregularidad de las monedas se toma un espacio adicional del macro para evitar recortes y pérdidas de la imagen.
+</p>
+
+#### Ambientación del Museo
+
+<p style="text-align: justify;">
+El usuario puede seleccionar su ambiente ideal para su tour virtual. Para ello se aplicaron 4 filtros que permiten cambiar los shaders generales de la escena y ajustar al gusto del usuario:
+</p>
+
+- bloomAmount: Cambia el rubor general de la escena, especialmente de los objetos.
+- SunLight: Varía la cantidad de luz solar presente en el museo durante el recorrido.
+- middleGrey: Varía la escala de grises de la escena.
+- maxLuminance: Modifica la luminancia presente en el Museo, variando principalmente el brillo de los objetos.
 
 ---
 ![alt](./imagenes/edgevertex.jpg)
